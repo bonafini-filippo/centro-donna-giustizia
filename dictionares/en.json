@@ -1,0 +1,123 @@
+{
+    "pages": {
+        "mission": {
+            "label": "Mission",
+            "href": "/mission"
+        },
+        "about": {
+            "label": "About Us",
+            "href": "/about"
+        },
+        "contacts": {
+            "label": "Contacts",
+            "href": "/contacts"
+        },
+        "services": {
+            "label": "Services",
+            "href": "/services"
+        },
+        "projects": {
+            "label": "Projects",
+            "href": "/projects"
+        }
+    },
+    "userMenu": {
+        "login": "Login",
+        "register": "Register",
+        "dashboard": "Dashboard",
+        "settings": "Settings",
+        "logout": "Logout"
+    },
+    "messages": {
+        "errors": {
+            "generic": "Oops, something went wrong!",
+            "invalidCode": "Invalid Code",
+            "expiredCode": "Expired Code"
+        },
+        "common": {
+            "backToLogin": "Back to Login"
+        }
+    },
+    "homeDict": {
+        "title": "Home Page",
+        "subtitle": "Subtitle of the home page"
+    },
+    "settingsDict": {
+        "errors": {},
+        "title": "Settings",
+        "fields": {
+            "name": "Name",
+            "newPassword": "New Password",
+            "role": "Role",
+            "adminRole": "Administrator",
+            "userRole": "User",
+            "twoFactorsTitle": "Two-Factor Authentication",
+            "twoFactorsText": "Enable two-factor authentication for this account.",
+            "saveButton": "Save"
+        }
+    },
+    "loginDict": {
+        "errors": {
+            "emailWithDiffrentProvider": "Email in use with a different provider!",
+            "invalidFields": "Incorrect fields!",
+            "emailDoesNotExist": "Email does not exist!",
+            "invalidCredentials": "Invalid credentials"
+        },
+        "messages": {
+            "emailSent": "Confirmation email sent!"
+        },
+        "title": "Log In",
+        "loginButtonConfirm": "Log In",
+        "twoFactorButtonConfirm": "Confirm",
+        "noAccount": "Don't have an account?",
+        "fotgotPassword": "Forgot Password?",
+        "twoFactorCode:": "Two-Factor Authentication Code"
+    },
+    "registerDict": {
+        "errors": {
+            "EmailWithDiffrentProvider": "Email in use with a different provider!",
+            "invalidEmail": "Invalid Email!",
+            "emailNotFound": "Email not found!"
+        },
+        "nameField": "Name",
+        "title": "Register",
+        "registerButton": "Register",
+        "haveAccount": "Already have an account?"
+    },
+    "resetDict": {
+        "errors": {
+            "invalidEmail": "Invalid Email!",
+            "emailNotFound": "Email not found!"
+        },
+        "messages": {
+            "resetSent": "Reset link sent!"
+        },
+        "title": "Forgot Password?",
+        "sendMailButton": "Reset Password"
+    },
+    "newPasswordDict": {
+        "errors": {
+            "missingToken": "Missing Token!",
+            "invalidFields": "Incorrect fields!",
+            "invalidToken": "Invalid Token!",
+            "expiredToken": "Expired Token!",
+            "emailDoesNotExist": "Email does not exist!"
+        },
+        "messages": {
+            "passwordUpdated": "Password updated!"
+        },
+        "title": "Enter new password",
+        "setPasswordButton": "Reset Password"
+    },
+    "newVerificationDict": {
+        "errors": {
+            "missingToken": "Missing Token!",
+            "expiredToken": "Expired Token!",
+            "emailDoesNotExist": "Email does not exist!"
+        },
+        "messages": {
+            "emailVerified": "Email verified!"
+        },
+        "title": "Account Verification"
+    }
+}

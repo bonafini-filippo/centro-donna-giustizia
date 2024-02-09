@@ -1,0 +1,123 @@
+{
+    "pages": {
+        "mission": {
+            "label": "Missione",
+            "href": "/mission"
+        },
+        "about": {
+            "label": "Chi siamo",
+            "href": "/about"
+        },
+        "contacts": {
+            "label": "Contatti",
+            "href": "/contacts"
+        },
+        "services": {
+            "label": "Servizi",
+            "href": "/services"
+        },
+        "projects": {
+            "label": "Progetti",
+            "href": "/projects"
+        }
+    },
+    "userMenu": {
+        "login": "Accedi",
+        "register": "Registrati",
+        "dashboard": "Dashboard",
+        "settings": "Impostazioni",
+        "logout": "Esci"
+    },
+    "messages": {
+        "errors": {
+            "generic": "Ops, qualcosa è andato storto!",
+            "invalidCode": "Codice non valido",
+            "expiredCode": "Codice scaduto"
+        },
+        "common": {
+            "backToLogin": "Torna al login"
+        }
+    },
+    "homeDict": {
+        "title": "Pagina principale",
+        "subtitle": "Sottotitolo delle pagina principale"
+    },
+    "settingsDict": {
+        "errors": {},
+        "title": "Impostazioni",
+        "fields": {
+            "name": "Nome",
+            "newPassword": "Nuova password",
+            "role": "Ruolo",
+            "adminRole": "Amministratore",
+            "userRole": "Utente",
+            "twoFactorsTitle": "Autenticazione a due fattori",
+            "twoFactorsText": "Abilita l'autenticazione a due fattori per questo account.",
+            "saveButton": "Salva"
+        }
+    },
+    "loginDict": {
+        "errors": {
+            "emailWithDiffrentProvider": "Email in uso con un differente provider!",
+            "invalidFields": "Campi non corretti!",
+            "emailDoesNotExist": "Email inesistente!",
+            "invalidCredentials": "Credenziali non valide"
+        },
+        "messages": {
+            "emailSent": "Email di conferma inviata!"
+        },
+        "title": "Accedi",
+        "loginButtonConfirm": "Accedi",
+        "twoFactorButtonConfirm": "Conferma",
+        "noAccount": "Non hai un account?",
+        "fotgotPassword": "Password smarrita?",
+        "twoFactorCode:": "Autenticazione a 2 fattori"
+    },
+    "registerDict": {
+        "errors": {
+            "EmailWithDiffrentProvider": "Email in uso con un differente provider!",
+            "invalidEmail": "Email non valida!",
+            "emailNotFound": "Email non trovata!"
+        },
+        "nameField": "Nome",
+        "title": "Registrati",
+        "registerButton": "Registrati",
+        "haveAccount": "Hai già un account?"
+    },
+    "resetDict": {
+        "errors": {
+            "invalidEmail": "Email non valida!",
+            "emailNotFound": "Email non trovata!"
+        },
+        "messages": {
+            "resetSent": "Link di reset inviato!"
+        },
+        "title": "Password smarrita?",
+        "sendMailButton": "Reimposta la password"
+    },
+    "newPasswordDict": {
+        "errors": {
+            "missingToken": "Token Mancante!",
+            "invalidFields": "Campi non corretti!",
+            "invalidToken": "Token non valido!",
+            "expiredToken": "Token scaduto!",
+            "emailDoesNotExist": "Email inesistente!"
+        },
+        "messages": {
+            "passwordUpdated": "Password aggiornata!"
+        },
+        "title": "Inserisci nuova password",
+        "setPasswordButton": "Reimposta la password"
+    },
+    "newVerificationDict": {
+        "errors": {
+            "missingToken": "Token Mancante!",
+            "expiredToken": "Token scaduto!",
+            "emailDoesNotExist": "Email inesistente!"
+        },
+        "messages": {
+            "emailVerified": "Email Verificata!"
+        },
+        "title": "Verifica account"
+    }
+}
