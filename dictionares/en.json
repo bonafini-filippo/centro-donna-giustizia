@@ -39,8 +39,10 @@
         }
     },
     "homeDict": {
-        "title": "Home Page",
-        "subtitle": "Subtitle of the home page"
+        "title": "Supporting every woman towards freedom",
+        "subtitle": "Subtitle of the main page",
+        "actionLab": "Call Now!",
+        "actionLabSecondary": "Explore"
     },
     "settingsDict": {
         "errors": {},
@@ -66,17 +68,17 @@
         "messages": {
             "emailSent": "Confirmation email sent!"
         },
-        "title": "Log In",
-        "loginButtonConfirm": "Log In",
+        "title": "Login",
+        "loginButtonConfirm": "Login",
         "twoFactorButtonConfirm": "Confirm",
         "noAccount": "Don't have an account?",
-        "fotgotPassword": "Forgot Password?",
-        "twoFactorCode:": "Two-Factor Authentication Code"
+        "fotgotPassword": "Forgot password?",
+        "twoFactorCode": "Two-Factor Authentication"
     },
     "registerDict": {
         "errors": {
             "EmailWithDiffrentProvider": "Email in use with a different provider!",
-            "invalidEmail": "Invalid Email!",
+            "invalidEmail": "Invalid email!",
             "emailNotFound": "Email not found!"
         },
         "nameField": "Name",
@@ -86,7 +88,7 @@
     },
     "resetDict": {
         "errors": {
-            "invalidEmail": "Invalid Email!",
+            "invalidEmail": "Invalid email!",
             "emailNotFound": "Email not found!"
         },
         "messages": {
@@ -97,22 +99,22 @@
     },
     "newPasswordDict": {
         "errors": {
-            "missingToken": "Missing Token!",
+            "missingToken": "Missing token!",
             "invalidFields": "Incorrect fields!",
-            "invalidToken": "Invalid Token!",
-            "expiredToken": "Expired Token!",
+            "invalidToken": "Invalid token!",
+            "expiredToken": "Expired token!",
             "emailDoesNotExist": "Email does not exist!"
         },
         "messages": {
             "passwordUpdated": "Password updated!"
         },
-        "title": "Enter new password",
+        "title": "Enter New Password",
         "setPasswordButton": "Reset Password"
     },
     "newVerificationDict": {
         "errors": {
-            "missingToken": "Missing Token!",
-            "expiredToken": "Expired Token!",
+            "missingToken": "Missing token!",
+            "expiredToken": "Expired token!",
             "emailDoesNotExist": "Email does not exist!"
         },
         "messages": {

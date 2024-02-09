@@ -26,21 +26,23 @@
         "register": "Registrieren",
         "dashboard": "Dashboard",
         "settings": "Einstellungen",
-        "logout": "Abmelden"
+        "logout": "Ausloggen"
     },
     "messages": {
         "errors": {
-            "generic": "Hoppla, etwas ist schief gelaufen!",
+            "generic": "Hoppla, etwas ist schiefgelaufen!",
             "invalidCode": "Ungültiger Code",
-            "expiredCode": "Abgelaufener Code"
+            "expiredCode": "Code abgelaufen"
         },
         "common": {
-            "backToLogin": "Zurück zur Anmeldung"
+            "backToLogin": "Zurück zum Login"
         }
     },
     "homeDict": {
-        "title": "Startseite",
-        "subtitle": "Untertitel der Startseite"
+        "title": "Wir unterstützen jede Frau auf dem Weg zur Freiheit",
+        "subtitle": "Untertitel der Startseite",
+        "actionLab": "Jetzt anrufen!",
+        "actionLabSecondary": "Erkunden"
     },
     "settingsDict": {
         "errors": {},
@@ -52,14 +54,14 @@
             "adminRole": "Administrator",
             "userRole": "Benutzer",
             "twoFactorsTitle": "Zwei-Faktor-Authentifizierung",
-            "twoFactorsText": "Aktivieren Sie die Zwei-Faktor-Authentifizierung für dieses Konto.",
+            "twoFactorsText": "Aktiviere die Zwei-Faktor-Authentifizierung für dieses Konto.",
             "saveButton": "Speichern"
         }
     },
     "loginDict": {
         "errors": {
-            "emailWithDiffrentProvider": "E-Mail wird mit einem anderen Anbieter verwendet!",
-            "invalidFields": "Falsche Felder!",
+            "emailWithDiffrentProvider": "E-Mail bereits in Verwendung bei einem anderen Anbieter!",
+            "invalidFields": "Ungültige Felder!",
             "emailDoesNotExist": "E-Mail existiert nicht!",
             "invalidCredentials": "Ungültige Anmeldedaten"
         },
@@ -69,20 +71,20 @@
         "title": "Anmelden",
         "loginButtonConfirm": "Anmelden",
         "twoFactorButtonConfirm": "Bestätigen",
-        "noAccount": "Sie haben noch kein Konto?",
+        "noAccount": "Sie haben noch keinen Account?",
         "fotgotPassword": "Passwort vergessen?",
-        "twoFactorCode:": "Zwei-Faktor-Authentifizierungscode"
+        "twoFactorCode": "Zwei-Faktor-Authentifizierung"
     },
     "registerDict": {
         "errors": {
-            "EmailWithDiffrentProvider": "E-Mail wird mit einem anderen Anbieter verwendet!",
+            "EmailWithDiffrentProvider": "E-Mail bereits in Verwendung bei einem anderen Anbieter!",
             "invalidEmail": "Ungültige E-Mail!",
             "emailNotFound": "E-Mail nicht gefunden!"
         },
         "nameField": "Name",
         "title": "Registrieren",
         "registerButton": "Registrieren",
-        "haveAccount": "Haben Sie bereits ein Konto?"
+        "haveAccount": "Haben Sie bereits einen Account?"
     },
     "resetDict": {
         "errors": {
@@ -98,26 +100,26 @@
     "newPasswordDict": {
         "errors": {
             "missingToken": "Fehlendes Token!",
-            "invalidFields": "Falsche Felder!",
+            "invalidFields": "Ungültige Felder!",
             "invalidToken": "Ungültiges Token!",
-            "expiredToken": "Abgelaufenes Token!",
+            "expiredToken": "Token abgelaufen!",
             "emailDoesNotExist": "E-Mail existiert nicht!"
         },
         "messages": {
             "passwordUpdated": "Passwort aktualisiert!"
         },
-        "title": "Neues Passwort eingeben",
+        "title": "Neues Passwort festlegen",
         "setPasswordButton": "Passwort zurücksetzen"
     },
     "newVerificationDict": {
         "errors": {
             "missingToken": "Fehlendes Token!",
-            "expiredToken": "Abgelaufenes Token!",
+            "expiredToken": "Token abgelaufen!",
             "emailDoesNotExist": "E-Mail existiert nicht!"
         },
         "messages": {
             "emailVerified": "E-Mail verifiziert!"
         },
-        "title": "Kontoüberprüfung"
+        "title": "Account verifizieren"
     }
 }
