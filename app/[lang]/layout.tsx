@@ -23,6 +23,7 @@ export default async function RootLayout({
 
   const { pages, userMenu } = await getDictionary(lang)
   const dictionariesForHeader = { pages, userMenu };
+  const dictionariesForFooter = { pages, userMenu };
 
   return (
 
@@ -32,7 +33,7 @@ export default async function RootLayout({
         <main>
           {children}
         </main>
-        <Footer pages={pages} lang={lang} />
+        <Footer dictionaries={dictionariesForFooter} lang={lang} />
         <Toaster />
       </body>
     </html>

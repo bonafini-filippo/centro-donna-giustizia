@@ -10,15 +10,11 @@ export default async function Home({ params: { lang } }: any) {
 
   return (<>
     <HeroSection
-      subtitle="FB Development"
       title={homeDict.title}
-      slogan={homeDict.subtitle}
-      actionLabel="Contattaci"
+      actionLab={homeDict.actionLab}
       actionUrl="/contacts"
-      secondaryActionLabel="Esplora"
+      secondaryActionLabel={homeDict.actionLabSecondary}
       secondaryActionUrl="/services"
-      image={HeroImage}
-      imageAlt="Bg-hero"
     />
 
   </>)

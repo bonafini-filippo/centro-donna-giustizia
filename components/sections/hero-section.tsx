@@ -1,58 +1,41 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "../ui/button"
-import { IoIosArrowRoundForward } from "react-icons/io";
+import { Anton } from "next/font/google";
+import Link from "next/link";
+
+const anton = Anton({
+    subsets: ['latin'],
+    weight: "400"
+})
 
 interface typesHeroSection {
     title: string,
-    subtitle: string,
-    slogan: string,
-    actionLabel: string,
+    actionLab: string,
     actionUrl: string,
-    secondaryActionLabel?: string,
-    secondaryActionUrl?: string,
-    image: string,
-    imageAlt: string
+    secondaryActionLabel: string,
+    secondaryActionUrl: string
+
 }
 
-export default function HeroSection({ title, subtitle, slogan, actionLabel, actionUrl, secondaryActionLabel, secondaryActionUrl, image, imageAlt }: typesHeroSection) {
+export default function HeroSection({ title, actionLab, actionUrl, secondaryActionLabel, secondaryActionUrl }: typesHeroSection) {
     return (
-        <section className="relative  py-8 lg:pt-0 lg:flex-col lg:pb-0">
-            <div className="grid lg:grid-cols-2 w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
-
-                <div className="mb-2 lg:my-40 lg:max-w-lg lg:pr-5">
-                    <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                        {subtitle}
-                    </p>
-                    <h1 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+        <section className={`${anton.className} flex justify-center items-center bg-black `}>
+            <div className="relative bg-hero-bg h-[900px] w-full bg-no-repeat bg-cover flex items-center">
+                <div className="m-12 md:m-0 md:ml-12 pt-20">
+                    <h1 className={`text-5xl lg:text-7xl md:text-6xl text-white text-center md:text-left max-w-[490px]`}>
                         {title}
                     </h1>
-                    <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-                        {slogan}
-                    </p>
-                    <div className="flex gap-2 items-center">
-                        <Button variant="default">
-                            <Link href={actionUrl}>{actionLabel}</Link>
-                        </Button>
-                        {secondaryActionLabel && secondaryActionUrl &&
-                            <Button variant="link" className="group">
-                                <Link href={secondaryActionUrl} className="flex items-center justify-center gap-0.5 ">
-                                    {secondaryActionLabel}
-                                    <IoIosArrowRoundForward size={20} className="group-hover:animate-arrow" />
-                                </Link>
-                            </Button>}
+
+                    <div className="flex flex-col space-y-5 mt-10 justify-start text-center   ">
+                        <Link href={actionUrl} className="bg-black text-white py-4 px-8 text-4xl rounded-sm">
+                            {actionLab}
+                        </Link>
+
+                        <Link href={secondaryActionUrl} className="bg-white text-black py-1 px-8 text-2xl rounded-sm">
+                            {secondaryActionLabel}
+                        </Link>
                     </div>
-                </div>
-                <div>
-                    <Image
-                        className="object-contain  w-full h-full"
-                        width={600}
-                        height={600}
-                        src={image}
-                        alt={imageAlt}
-                    />
+
                 </div>
             </div>
-        </section>
+        </section >
     )
 }

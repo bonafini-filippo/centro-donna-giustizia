@@ -39,8 +39,10 @@
         }
     },
     "homeDict": {
-        "title": "Pagina principale",
-        "subtitle": "Sottotitolo delle pagina principale"
+        "title": "Sosteniamo ogni donna verso la libertà",
+        "subtitle": "Sottotitolo delle pagina principale",
+        "actionLab": "Chiama ora!",
+        "actionLabSecondary": "Esplora"
     },
     "settingsDict": {
         "errors": {},
