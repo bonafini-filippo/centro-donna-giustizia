@@ -28,7 +28,7 @@ export function NewsCard({ title, par, image, alt, reverse }: any) {
 
 
                     <div className='flex justify-end mt-8'>
-                        <Button size={'lg'} variant="dark" className={`${anton.className} text-3xl uppercase space-x-2`}>
+                        <Button variant="dark" className={`${anton.className} text-2xl uppercase space-x-2 w-full p-6`}>
                             <span>Scopri</span>
                             <IoMdArrowRoundForward />
                         </Button>
