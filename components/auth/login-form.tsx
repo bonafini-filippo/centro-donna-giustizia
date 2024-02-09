@@ -75,7 +75,6 @@ export const LoginForm = ({ dictionaries, lang }: any) => {
             headerLabel={loginDict.title}
             backButtonLabel={loginDict.noAccount}
             baclButtonHref="/register"
-            showSocial
         >
             <Form {...form}>
                 <form
