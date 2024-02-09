@@ -19,11 +19,11 @@ export function NewsCard({ title, par, image, alt, reverse }: any) {
 
             <Image width={500} height={450} src={image} alt={alt} className='w-full md:max-w-[400px] object-cover' />
 
-            <div className='p-10 space-y-5'>
+            <div className='p-3 lg:p-8 space-y-5'>
 
                 <div className='flex flex-col h-full'>
 
-                    <h2 className={`${anton.className} text-6xl mb-5 uppercase text-left mt-3`}>{title}</h2>
+                    <h2 className={`${anton.className} text-5xl mb-5 uppercase text-left mt-3`}>{title}</h2>
                     <p className='text-lg flex-grow'>{par}</p>
 
 
