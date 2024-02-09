@@ -39,7 +39,7 @@ export default function Header({ dictionaries, lang }: any) {
                     </Button>
                 </div>
 
-                <div className={`flex gap-16 flex-col md:relative absolute z-30 top-0 duration-100 left-0 overflow-hidden  bottom-0 md:block md:bg-transparent md:pt-0 pt-44 backdrop-blur-3xl md:backdrop-blur-0 ${openMenu ? "right-0 h-screen" : "right-full"}`}>
+                <div className={`flex gap-16 flex-col md:relative absolute z-30 top-0 duration-100 left-0 overflow-hidden  bottom-0 md:block md:bg-transparent md:pt-0 pt-44 bg-black ${openMenu ? "right-0 h-screen" : "right-full"}`}>
 
                     {Object.keys(pages).map(key => {
                         const page = pages[key];
