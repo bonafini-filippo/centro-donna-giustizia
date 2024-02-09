@@ -17,7 +17,7 @@ export function NewsCard({ title, par, image, alt, reverse }: any) {
         <Card className={` flex justify-between overflow-hidden rounded-xl max-w-[1200px] text-black px-0 bg-[#DFDFDF] ${flexDirectionClass}`}>
 
 
-            <Image width={500} height={450} src={image} alt={alt} className='w-full md:max-w-[400px] object-cover' />
+            <Image width={500} height={450} src={image} alt={alt} className='w-full md:max-w-[400px] h-[300px] md:h-auto object-cover' />
 
             <div className='p-3 lg:p-8 space-y-5'>
 
