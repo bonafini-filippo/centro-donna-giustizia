@@ -18,7 +18,7 @@ interface typesHeroSection {
 export default function HeroSection({ title, actionLab, actionUrl, secondaryActionLabel, secondaryActionUrl }: typesHeroSection) {
     return (
         <section className={`${anton.className} flex justify-center items-center bg-black `}>
-            <div className="relative bg-hero-bg h-[1200px] w-full bg-no-repeat bg-cover flex items-center">
+            <div className="relative bg-hero-bg h-screen w-full bg-no-repeat bg-cover flex items-center">
                 <div className="m-12 md:m-0 md:ml-12 pt-20">
                     <h1 className={`text-5xl lg:text-7xl md:text-6xl text-white text-center md:text-left max-w-[490px]`}>
                         {title}
