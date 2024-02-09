@@ -6,7 +6,7 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 
 export function NewsCard({ title, image, alt }: any) {
     return (
-        <Card className='w-[300px] flex-shrink-0 overflow-hidden'>
+        <Card className='w-[300px]  flex-shrink-0 overflow-hidden'>
             <Image width={300} height={250} src={image} alt={alt} className='h-[200px] object-cover' />
             <h2 className='text-2xl uppercase text-left mt-3 ml-3'>{title}</h2>
             <div className='flex justify-end'>

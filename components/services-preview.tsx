@@ -17,7 +17,7 @@ export function NewsCard({ title, par, image, alt, reverse }: any) {
         <Card className={` flex justify-between overflow-hidden rounded-xl max-w-[1200px] text-black px-0 bg-[#DFDFDF] ${flexDirectionClass}`}>
 
 
-            <Image width={500} height={450} src={image} alt={alt} className='h-[400px] object-cover' />
+            <Image width={500} height={450} src={image} alt={alt} className='w-full md:max-w-[400px] object-cover' />
 
             <div className='p-10 space-y-5'>
 
@@ -61,7 +61,7 @@ export default function ServicesPeview() {
             />
 
 
-            <Card className={`flex justify-center items-center rounded-xl w-full hover:bg-black/15 cursor-pointer text-black  bg-[#DFDFDF]`}>
+            <Card className={`flex justify-center items-center rounded-xl w-full max-w-[1200px] hover:bg-black/15 cursor-pointer text-black  bg-[#DFDFDF]`}>
                 <h2 className={`${anton.className} text-3xl uppercase text-left my-3 flex justify-center items-center gap-2`}>
                     <span>MOSTRA TUTTI I SERVIZI</span>
                     <IoMdArrowRoundForward size={43} />
