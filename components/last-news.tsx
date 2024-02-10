@@ -23,55 +23,60 @@ export function NewsCard({ title, image, alt }: any) {
 
 export default function LastNews() {
     return (
-        <div className='flex overflow-x-auto overflow-y-hidden md:max-w-[1560px] md:mx-auto mx-3 space-x-3 py-5 pb-12'>
-            <NewsCard
-                title="testo di prova anche abbaasfasfstanmzahezze"
-                image="/test/protesta1.jpg"
-                alt="testo alternativo"
-            />
-            <NewsCard
-                title="testo di prova anche bello abbastanmza lungo con differenti lunghezze cosi da far capire come ci si comporta"
-                image="/test/protesta2.jpg"
-                alt="testo alternativo"
-            /> <NewsCard
-                title="testo di prova anche abbastanmza lungo con differenti lunghezze"
-                image="/test/protesta3.jpg"
-                alt="testo alternativo"
-            /> <NewsCard
-                title="testo di prova anche abbastanmza lungo con differenti lunghezze"
-                image="/test/protesta4.jpg"
-                alt="testo alternativo"
-            />
-            <NewsCard
-                title="testo di prova anche abbastanmza lungo con differenti lunghezze"
-                image="/test/protesta4.jpg"
-                alt="testo alternativo"
-            />
-            <NewsCard
-                title="testo di prova anche abbastanmza lungo con differenti lunghezze"
-                image="/test/protesta4.jpg"
-                alt="testo alternativo"
-            />
-            <NewsCard
-                title="testo di prova anche abbastanmza lungo con differenti lunghezze"
-                image="/test/protesta4.jpg"
-                alt="testo alternativo"
-            />
-            <NewsCard
-                title="testo di prova anche abbastanmza lungo con differenti lunghezze"
-                image="/test/protesta4.jpg"
-                alt="testo alternativo"
-            />
-            <Card className='w-[300px] text-black flex flex-col hover:bg-black cursor-pointer transition-all  flex-shrink-0 overflow-hidden group'>
-                <div className='m-auto flex flex-col items-center'>
-                    <div>
-                        <FaPlay size={100} className='group-hover:text-white' />
+        <div className='relative md:max-w-[1580px] md:mx-auto'>
+            <div className='flex overflow-x-auto overflow-y-hidden  mx-3 space-x-3 py-5 pb-12'>
+                <NewsCard
+                    title="testo di prova anche abbaasfasfstanmzahezze"
+                    image="/test/protesta1.jpg"
+                    alt="testo alternativo"
+                />
+                <NewsCard
+                    title="testo di prova anche bello abbastanmza lungo con differenti lunghezze cosi da far capire come ci si comporta"
+                    image="/test/protesta2.jpg"
+                    alt="testo alternativo"
+                /> <NewsCard
+                    title="testo di prova anche abbastanmza lungo con differenti lunghezze"
+                    image="/test/protesta3.jpg"
+                    alt="testo alternativo"
+                /> <NewsCard
+                    title="testo di prova anche abbastanmza lungo con differenti lunghezze"
+                    image="/test/protesta4.jpg"
+                    alt="testo alternativo"
+                />
+                <NewsCard
+                    title="testo di prova anche abbastanmza lungo con differenti lunghezze"
+                    image="/test/protesta4.jpg"
+                    alt="testo alternativo"
+                />
+                <NewsCard
+                    title="testo di prova anche abbastanmza lungo con differenti lunghezze"
+                    image="/test/protesta4.jpg"
+                    alt="testo alternativo"
+                />
+                <NewsCard
+                    title="testo di prova anche abbastanmza lungo con differenti lunghezze"
+                    image="/test/protesta4.jpg"
+                    alt="testo alternativo"
+                />
+                <NewsCard
+                    title="testo di prova anche abbastanmza lungo con differenti lunghezze"
+                    image="/test/protesta4.jpg"
+                    alt="testo alternativo"
+                />
+                <Card className='w-[300px] text-black flex flex-col hover:bg-black cursor-pointer transition-all  flex-shrink-0 overflow-hidden group'>
+                    <div className='m-auto flex flex-col items-center'>
+                        <div>
+                            <FaPlay size={100} className='group-hover:text-white' />
+                        </div>
+                        <h2 className='text-4xl group-hover:text-white  flex-grow uppercase text-left mt-9 ml-3 line-clamp-4'>
+                            Mostra tutte
+                        </h2>
                     </div>
-                    <h2 className='text-4xl group-hover:text-white  flex-grow uppercase text-left mt-9 ml-3 line-clamp-4'>
-                        Mostra tutte
-                    </h2>
-                </div>
-            </Card>
+                </Card>
+            </div>
+            <div className='absolute left-0 top-0 w-12  bg-gradient-to-r from-black to-transparent h-full'></div>
+            <div className='absolute right-0  top-0 w-12 bg-gradient-to-r from-transparent to-black h-full'></div>
         </div>
+
     );
 }
