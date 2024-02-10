@@ -2,8 +2,6 @@ import HeroSection from "@/components/sections/hero-section"
 import NewsSection from "@/components/sections/news-section";
 import ServicesPeview from "@/components/sections/services-preview-section";
 
-const HeroImage = "/hero.png"
-
 import { getDictionary } from '@/lib/dictionaries';
 
 export default async function Home({ params: { lang } }: any) {
