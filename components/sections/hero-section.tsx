@@ -25,7 +25,7 @@ export default function HeroSection({ title, actionLab, actionUrl, secondaryActi
                     </h1>
 
                     <div className="flex flex-col space-y-5 mt-10 justify-start text-center   ">
-                        <Link href={actionUrl} className="bg-black text-white uppercase py-2 hover:bg-black/80  text-4xl rounded-sm">
+                        <Link href={actionUrl} className="bg-primary text-white uppercase py-2 hover:bg-primary/90  text-4xl rounded-sm">
                             {actionLab}
                         </Link>
 

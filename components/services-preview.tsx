@@ -14,7 +14,7 @@ export function NewsCard({ title, par, image, alt, reverse }: any) {
     const flexDirectionClass = reverse ? 'flex-col md:flex-row-reverse' : 'md:flex-row flex-col';
 
     return (
-        <Card className={` flex justify-between overflow-hidden rounded-xl max-w-[1200px] text-black px-0 bg-[#DFDFDF] ${flexDirectionClass}`}>
+        <Card className={` flex justify-between overflow-hidden rounded-xl max-w-[1200px]  px-0 bg-[#DFDFDF] ${flexDirectionClass}`}>
 
 
             <Image width={500} height={450} src={image} alt={alt} className='w-full md:max-w-[400px] h-[300px] md:h-auto object-cover' />
@@ -23,7 +23,7 @@ export function NewsCard({ title, par, image, alt, reverse }: any) {
 
                 <div className='flex flex-col h-full'>
 
-                    <h2 className={`${anton.className} text-5xl mb-5 uppercase text-left mt-3`}>{title}</h2>
+                    <h2 className={`${anton.className} text-primary text-5xl mb-5 uppercase text-left mt-3`}>{title}</h2>
                     <p className='text-lg flex-grow'>{par}</p>
 
 
