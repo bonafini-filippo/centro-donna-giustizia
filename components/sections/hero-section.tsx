@@ -29,7 +29,7 @@ export default function HeroSection({ title, actionLab, actionUrl, secondaryActi
                             {actionLab}
                         </Link>
 
-                        <Link href={secondaryActionUrl} className="bg-white uppercase text-black hover:bg-white/50 py-1 text-2xl rounded-sm">
+                        <Link href={secondaryActionUrl} className="bg-white uppercase text-black hover:bg-white/90 py-1 text-2xl rounded-sm">
                             {secondaryActionLabel}
                         </Link>
                     </div>
