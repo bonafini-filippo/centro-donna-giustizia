@@ -9,7 +9,6 @@ import { IoCloseOutline } from "react-icons/io5";
 import { useState } from "react";
 import { Anton } from "next/font/google";
 
-
 const anton = Anton({
     subsets: ['latin'],
     weight: "400"
@@ -26,8 +25,9 @@ export default function Header({ dictionaries, lang }: any) {
     };
 
     return (
-        <header className={` ${anton.className} flex absolute top-0 right-0 left-0 `}>
-            <nav className="flex items-center md:justify-normal justify-between flex-grow md:flex-row md:gap-x-4 mt-12">
+        <header className={` ${anton.className} flex absolute top-0 right-0 left-0  bg-black`}>
+
+            <nav className="flex items-center md:justify-normal justify-between flex-grow md:flex-row md:gap-x-4 mt-12 pb-12">
                 <div className="flex z-50 ">
                     <Button
                         onClick={() => { setOpenMenu(false) }}
