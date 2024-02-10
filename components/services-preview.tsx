@@ -60,7 +60,13 @@ export default function ServicesPeview() {
                 reverse
             />
 
+            <NewsCard
+                title="Luna blu"
+                image="/test/protesta4.jpg"
+                alt="testo alternativo"
+                par="Questo è un testo riempitivo per capire il situlatato finale come possa prendere le sembianze, senza pensare di inserire testi già completi e prodotti. Qa ci andrà una breve descrizione del contesto generale della sezione."
 
+            />
             <Card className={`flex justify-center items-center rounded-xl w-full max-w-[1200px] hover:bg-black/15 cursor-pointer text-black  bg-[#DFDFDF]`}>
                 <h2 className={`${anton.className} text-3xl uppercase text-left my-3 flex justify-center items-center gap-2`}>
                     <span>MOSTRA TUTTI I SERVIZI</span>
