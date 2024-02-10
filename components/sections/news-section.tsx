@@ -18,9 +18,9 @@ interface typesHeroSection {
 
 export default function NewsSection({ title, actionLab, actionUrl, secondaryActionLabel, secondaryActionUrl }: typesHeroSection) {
     return (
-        <section className={`${anton.className} scrolbar text-center  bg-black `}>
+        <section className={`${anton.className} scrolbar text-center  relative -top-32 z-50`}>
             <div>
-                <h1 className="text-white text-6xl pt-8 pb-4">ULTIME NOTIZIE</h1>
+                <h1 className="text-white text-6xl mb-10">ULTIME NOTIZIE</h1>
             </div>
             <LastNews />
         </section >

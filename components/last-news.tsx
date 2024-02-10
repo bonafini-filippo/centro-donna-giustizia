@@ -23,8 +23,8 @@ export function NewsCard({ title, image, alt }: any) {
 
 export default function LastNews() {
     return (
-        <div className='relative md:max-w-[1580px] md:mx-auto'>
-            <div className='flex overflow-x-auto overflow-y-hidden  mx-3 space-x-3 py-5 pb-12'>
+        <div className='relative md:mx-auto bg-black'>
+            <div className='flex overflow-x-auto overflow-y-hidden space-x-3 pb-3'>
                 <NewsCard
                     title="testo di prova anche abbaasfasfstanmzahezze"
                     image="/test/protesta1.jpg"
