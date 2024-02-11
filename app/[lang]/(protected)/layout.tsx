@@ -22,7 +22,9 @@ export default async function PrivateLayout({
                 <div>Back to Website</div>
                 <UserButton dictionaries={userMenu} lang={lang} />
             </Link>
-            {children}
+            <main className='p-3'>
+                {children}
+            </main>
         </SessionProvider>
     )
 }

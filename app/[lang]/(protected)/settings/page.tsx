@@ -22,7 +22,7 @@ const SettingsPage = async ({
 
 
     return (
-        <Card className="shadow-md">
+        <Card className="shadow-md max-w-[900px] mx-auto">
             <CardHeader>
                 <p className="text-2xl font-semibold text-center">
                     ⚙️ {settingsDict.title}
