@@ -1,9 +1,10 @@
 import Link from "next/link";
 import LocaleSwitcher from "./locale-switcher";
 import { UserButton } from "./auth/user-button";
+import { Button } from "./ui/button";
 
 export default function Footer({ dictionaries, lang }: any) {
-    const { pages, userMenu } = dictionaries
+    const { pages } = dictionaries
     return (
         <footer className="p-4 bg-zinc-50 md:p-8 lg:p-10 dark:bg-gray-800">
             <div className="mx-auto max-w-screen-xl text-center">
@@ -19,9 +20,23 @@ export default function Footer({ dictionaries, lang }: any) {
                         })}
                     </ul>
                 </nav>
-                <LocaleSwitcher />
-                <UserButton dictionaries={userMenu} lang={lang} />
-                <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://www.fb-development.com/" className="hover:underline">FB-Development</a>. All Rights Reserved.</span>
+
+
+
+
+                <div className="md:flex justify-between items-center w-full">
+                    <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://www.fb-development.com/" className="hover:underline">FB-Development</a>. All Rights Reserved.</span>
+
+                    <div className="flex mt-3 md:mt-0 justify-center items-center space-x-2">
+                        <LocaleSwitcher />
+                        <Link href="/dashboard">
+                            <Button>Area privata</Button>
+                        </Link>
+                    </div>
+
+                </div>
+
+
             </div>
         </footer>
     )

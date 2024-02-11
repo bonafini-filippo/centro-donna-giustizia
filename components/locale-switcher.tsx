@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { i18n } from '@/i18n.config'
+import { Button } from './ui/button'
 
 
 
@@ -17,17 +18,21 @@ export default function LocaleSwitcher() {
     }
 
     return (
-        <ul className='flex gap-x-3'>
+        <ul className='flex gap-x-1'>
             {i18n.locales.map(locale => {
                 return (
+
                     <li key={locale}>
-                        <Link
-                            href={redirectedPathName(locale)}
-                            className='rounded-md border bg-black px-3 py-2 text-white'
-                        >
-                            {locale}
-                        </Link>
+                        <Button variant="dark" className='w-[50px]'>
+                            <Link
+                                href={redirectedPathName(locale)}
+                            >
+                                {locale}
+                            </Link>
+                        </Button>
                     </li>
+
+
                 )
             })}
         </ul>

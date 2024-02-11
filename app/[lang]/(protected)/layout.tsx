@@ -1,28 +1,28 @@
-import Header from '@/components/header'
-import Footer from '@/components/footer'
-import { Locale } from '@/i18n.config'
+import { auth } from '@/auth';
+import { UserButton } from '@/components/auth/user-button';
+import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/lib/dictionaries';
+import { SessionProvider } from 'next-auth/react'
+import Link from 'next/link';
 
-
-const PublicLayout = async ({
+export default async function PrivateLayout({
     children,
     params: { lang }
 }: {
-    children: React.ReactNode
+    children: React.ReactNode,
     params: { lang: Locale }
-}) => {
+}) {
 
+    const session = await auth();
+    const { userMenu } = await getDictionary(lang)
 
-    const { pages, userMenu } = await getDictionary(lang)
-    const dictionariesForHeader = { pages, userMenu };
-    const dictionariesForFooter = { pages, userMenu };
-
-    return (<>
-        <Header dictionaries={dictionariesForHeader} lang={lang} />
-        <main>
+    return (
+        <SessionProvider session={session}>
+            <Link href="/">
+                <div>Back to Website</div>
+                <UserButton dictionaries={userMenu} lang={lang} />
+            </Link>
             {children}
-        </main>
-    </>);
-};
-
-export default PublicLayout;
+        </SessionProvider>
+    )
+}
