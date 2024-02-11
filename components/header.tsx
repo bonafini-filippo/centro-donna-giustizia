@@ -15,7 +15,7 @@ const anton = Anton({
 })
 
 export default function Header({ dictionaries, lang }: any) {
-    const { pages, userMenu } = dictionaries;
+    const { pages } = dictionaries;
 
     const pathname = usePathname();
     const [openMenu, setOpenMenu] = useState<boolean>(false);
