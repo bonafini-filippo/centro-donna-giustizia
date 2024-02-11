@@ -1,6 +1,6 @@
 import Link from "next/link";
 import LocaleSwitcher from "./locale-switcher";
-import { UserButton } from "./auth/user-button";
+import { FaLock } from "react-icons/fa";
 import { Button } from "./ui/button";
 
 export default function Footer({ dictionaries, lang }: any) {
@@ -30,7 +30,7 @@ export default function Footer({ dictionaries, lang }: any) {
                     <div className="flex mt-3 md:mt-0 justify-center items-center space-x-2">
                         <LocaleSwitcher />
                         <Link href="/dashboard">
-                            <Button>Area privata</Button>
+                            <Button className="gap-1"><FaLock /><span>Area privata</span></Button>
                         </Link>
                     </div>
 
