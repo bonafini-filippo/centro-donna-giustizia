@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { HashLoader } from "react-spinners"
 import { useSearchParams } from "next/navigation";
 
-import { newVerificationDict } from "@/actions/new-verification";
+import { newVerificationDic } from "@/actions/new-verification";
 import { CardWrapper } from "@/components/auth/card-wrapper";
 import { FormError } from "@/components/form-error";
 import { FormSuccess } from "@/components/form-success";
@@ -26,7 +26,7 @@ export const NewVerificationForm = ({ dictionaries, lang }: any) => {
             setError(newVerificationDict.errors.missingToken)
             return;
         };
-        newVerificationDict(token, newVerificationDict)
+        newVerificationDic(token, newVerificationDict)
             .then((data: any) => {
                 setSuccess(data.success);
                 setError(data.error);
