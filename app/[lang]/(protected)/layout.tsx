@@ -19,7 +19,7 @@ export default async function PrivateLayout({
             <div>Back to Website</div>
             <UserButton dictionaries={userMenu} lang={lang} />
         </Link>
-        <main className='p-3'>
+        <main className='p-1'>
             {children}
         </main>
 
