@@ -43,7 +43,7 @@ export const NewVerificationForm = ({ dictionaries, lang }: any) => {
         <CardWrapper
             headerLabel={newVerificationDict.title}
             backButtonLabel={messages.common.backToLogin}
-            baclButtonHref="/"
+            baclButtonHref="/login"
         >
             <div className="flex items-center w-full justify-center">
                 {!success && !error && (<HashLoader />)}
