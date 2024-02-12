@@ -1,5 +1,7 @@
 import Unauthorized from "@/components/unauthorized"
 import { currentRole } from "@/lib/auth"
+import Title from "../_components/title"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const page = async ({ params: { lang } }: any) => {
 
@@ -11,7 +13,14 @@ const page = async ({ params: { lang } }: any) => {
                 <Unauthorized lang={lang} />
             </div>
         ) : (
-            <div>Pagina di gestione degli utenti</div>
+            <Card>
+                <CardHeader>
+                    <CardTitle className='text-primary text-4xl'>Gestione utenti</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    contenuto della pagina
+                </CardContent>
+            </Card>
         )
     )
 }

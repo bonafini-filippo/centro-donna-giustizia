@@ -1,9 +1,21 @@
-import React from 'react'
+"use client"
 
-const page = () => {
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useCurrentUser } from "@/hooks/use-current-user";
+
+
+const ServicesPage = () => {
+    const user = useCurrentUser();
     return (
-        <div>page</div>
-    )
+        <Card>
+            <CardHeader>
+                <CardTitle className='text-primary text-4xl'>Servizi</CardTitle>
+            </CardHeader>
+            <CardContent>
+                contenuto della pagina
+            </CardContent>
+        </Card>
+    );
 }
 
-export default page
+export default ServicesPage;

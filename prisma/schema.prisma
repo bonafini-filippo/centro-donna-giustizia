@@ -81,3 +81,13 @@ model TwoFactorConfirmation {
 
   @@unique([userId])
 }
+
+model News {
+  id                   String  @id @default(cuid())
+  title                String
+  description          String
+  secondaryDescription String?
+  editor               String
+  coverImage           String
+  images               String
+}
