@@ -33,7 +33,7 @@ export default async function PrivateLayout({
 
                     <div className='flex relative h-full'>
                         <Navbar />
-                        <main className='bg-zinc-100 flex-grow p-5'>
+                        <main className='bg-zinc-100 flex-grow p-1 md:p-2 lg:p-6'>
                             <Card>
                                 {children}
                             </Card>
