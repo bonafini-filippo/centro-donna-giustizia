@@ -8,17 +8,13 @@ import { ImCross } from "react-icons/im";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionaries";
 import Link from "next/link";
+import { LogoutButton } from "./auth/logout-button";
 
-const SettingsPage = async ({
-    params: { lang }
-}: {
-    params: { lang: Locale }
-}) => {
-    const { noAccessDict } = await getDictionary(lang)
-
+const Unauthorized = async ({ dictionaries, lang }: any) => {
+    const noAccessDict = dictionaries;
 
     return (
-        <Card className="shadow-md max-w-[900px] mx-auto">
+        <Card className="shadow-md max-w-[900px] mx-auto py-12">
             <CardHeader>
                 <h1 className="text-3xl font-semibold text-center flex justify-center items-center gap-2">
                     <ImCross color="red" /> {noAccessDict.title}
@@ -26,14 +22,21 @@ const SettingsPage = async ({
             </CardHeader>
             <CardContent className="flex flex-col justify-center items-center gap-6">
                 <p className="text-lg">{noAccessDict.text}</p>
-                <Button className=" text-xl">
-                    <Link href="/">
-                        {noAccessDict.backButtonLabel}
-                    </Link>
-                </Button>
+                <div className="flex flex-col justify-center items-center gap-2">
+                    <Button className=" text-xl">
+                        <Link href="/">
+                            {noAccessDict.backButtonLabel}
+                        </Link>
+                    </Button><LogoutButton>
+                        <Button variant="link" className=" text-md">
+                            Logout
+                        </Button>
+                    </LogoutButton>
+                </div>
+
             </CardContent>
         </Card>
     );
 }
 
-export default SettingsPage;
+export default Unauthorized;

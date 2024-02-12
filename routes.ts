@@ -41,3 +41,10 @@ export const apiAuthPrefix = "/api/auth";
  * @type{string}
  */
 export const DEFAULT_LOGIN_REDIRECT = "/dashboard"
+
+/**
+ * The default redirect path unauthorized
+ * @type{string}
+ */
+export const UNAUTHORIZED_REDIRECT = "/user"
+

@@ -12,7 +12,6 @@ import {
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from "negotiator"
 import { i18n } from "./i18n.config"
-import { currentRole } from "./lib/auth"
 
 const { auth } = NextAuth(authConfig)
 
@@ -57,6 +56,7 @@ const middleware = auth((req) => {
 
     const { nextUrl } = req;
     const isLoggedIn = !!req.auth;
+
     const isApiAuthRoute = nextUrl.pathname.startsWith(apiAuthPrefix);
 
     const isPublicRoute = withLanguage(publicRoutes, `/${locale}`).includes(nextUrl.pathname);
