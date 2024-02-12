@@ -25,9 +25,9 @@ import { register } from "@/actions/register";
 
 
 export const RegisterForm = ({ dictionaries }: any) => {
-    const { registerDict, messages } = dictionaries;
+    const { registerDict } = dictionaries;
     const [error, setError] = useState<string | undefined>("");
-    const [success, setSuccess] = useState<string | undefined>("");
+    const [success, setSuccess] = useState<any | undefined>("");
     const [isPending, startTransition] = useTransition();
 
     const form = useForm<z.infer<typeof RegisterSchema>>({
@@ -61,7 +61,7 @@ export const RegisterForm = ({ dictionaries }: any) => {
                     onSubmit={form.handleSubmit(onSubmit)}
                     className="space-y-6"
                 >
-                    <div className="space-y-4">
+                    <div className={`space-y-4 ${(success) && "hidden"}`}>
                         <FormField
                             control={form.control}
                             name="name"
@@ -118,9 +118,9 @@ export const RegisterForm = ({ dictionaries }: any) => {
                     <FormError message={error} />
                     <FormSuccess message={success} />
                     <Button
-                        disabled={isPending}
+                        disabled={isPending || success}
                         type="submit"
-                        className="w-full"
+                        className={`${(success) && "hidden"}`}
                     >
                         {registerDict.registerButton}
                     </Button>
