@@ -33,12 +33,12 @@ export default function Header({ dictionaries, lang }: any) {
                         asChild
                         variant={pathname === `"/"` ? "link" : "link"}>
                         <Link href={`/${lang}`}>
-                            <Image src={"/logo.svg"} width={100} height={100} alt="Centro-Donna-Giustizia"></Image>
+                            <Image src={"/logo.svg"} width={90} height={90} alt="Centro-Donna-Giustizia"></Image>
                         </Link>
                     </Button>
                 </div>
 
-                <div className={`flex gap-16 flex-col md:relative absolute z-30 top-0 left-0 duration-100 overflow-hidden  bottom-0 md:block md:bg-transparent md:pt-0 pt-44 bg-black  h-screen md:h-auto ${openMenu ? "right-0" : "right-full"}`}>
+                <div className={`flex gap-12 flex-col md:relative absolute z-30 top-0 left-0 duration-100 overflow-hidden  bottom-0 md:block md:bg-transparent md:pt-0 pt-36 bg-black  h-screen md:h-auto ${openMenu ? "right-0" : "right-full"}`}>
 
                     {Object.keys(pages).map(key => {
                         const page = pages[key];
