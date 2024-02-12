@@ -7,9 +7,8 @@ const DashboardPage = () => {
     const user = useCurrentUser();
     return (
         <div>
-            {user?.name}
+            dashboard page
         </div>
-
     );
 }
 

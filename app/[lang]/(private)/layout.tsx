@@ -7,6 +7,8 @@ import { currentRole } from '@/lib/auth';
 import { getDictionary } from '@/lib/dictionaries';
 import { SessionProvider } from 'next-auth/react';
 import Link from 'next/link';
+import Navbar from './_components/navbar';
+import { Card } from '@/components/ui/card';
 
 export default async function PrivateLayout({
     children,
@@ -26,21 +28,24 @@ export default async function PrivateLayout({
                     <div className='md:pt-20 p-2'>
                         <Unauthorized dictionaries={noAccessDict} lang={lang} />
                     </div>
-                ) : (<>
-                    <Link href="/">
+                ) : (
+
+
+                    <div className='flex relative h-full'>
+                        <Navbar />
+                        <main className='bg-zinc-100 flex-grow p-5'>
+                            <Card>
+                                {children}
+                            </Card>
+                        </main>
+                    </div>
+
+
+                )
+            }
+        </SessionProvider >)
+}
+{/* <Link href="/">
                         <div>Back to Website</div>
                     </Link>
-                    <UserButton dictionaries={userMenu} lang={lang} />
-                    <main className='p-1'>
-                        {children}
-                    </main>
-                </>)
-            }
-
-
-
-
-
-
-        </SessionProvider>)
-}
+                    <UserButton dictionaries={userMenu} lang={lang} /> */}
