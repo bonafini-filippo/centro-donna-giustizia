@@ -59,6 +59,11 @@
             "saveButton": "Salva"
         }
     },
+    "noAccessDict": {
+        "title": "Non sei autorizzato!",
+        "text": "Fai richiesta ad un superiore o all'amministratore di rete per farti abilitare all'accesso!",
+        "backButtonLabel": "Torna al sito!"
+    },
     "loginDict": {
         "errors": {
             "emailWithDiffrentProvider": "Email in uso con un differente provider!",

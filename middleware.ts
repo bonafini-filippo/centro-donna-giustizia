@@ -12,13 +12,12 @@ import {
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from "negotiator"
 import { i18n } from "./i18n.config"
+import { currentRole } from "./lib/auth"
 
 const { auth } = NextAuth(authConfig)
 
 let defaultLocale = i18n.defaultLocale
 let locales = i18n.locales
-
-
 
 
 function getLocale(request: NextRequest): string {
@@ -45,7 +44,6 @@ function withLanguage(languages: string[], lang: string): string[] {
 
 
 const middleware = auth((req) => {
-
     const pathname = req.nextUrl.pathname;
     const apiRoutePrefixes = ['/api'];
     const pathnameIsMissingLocale = locales.every(
@@ -97,6 +95,7 @@ const middleware = auth((req) => {
             nextUrl
         ));
     }
+
 
     return null;
 })
