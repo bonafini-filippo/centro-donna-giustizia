@@ -1,4 +1,5 @@
 "use client"
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaRegNewspaper, FaPhotoFilm } from "react-icons/fa6";
 import { FaHandsHelping, FaUsers } from "react-icons/fa";
@@ -7,6 +8,7 @@ import { MdDashboard } from "react-icons/md";
 import { LogoutButton } from "@/components/auth/logout-button";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Item = ({ children, href, isOpen }: { children: React.ReactNode, href: string, isOpen: boolean }) => {
     return (
@@ -19,30 +21,35 @@ const Item = ({ children, href, isOpen }: { children: React.ReactNode, href: str
 };
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState<boolean>(false)
+    const [isOpen, setIsOpen] = useState<boolean>(true)
+    const pathname = usePathname();
 
     return (<>
-        <Button className="fixed bottom-0 right-0 z-50 " onClick={() => setIsOpen(!isOpen)}>
-            apri
-        </Button>
         <aside className={`flex flex-col justify-between transition-all duration-100 ${isOpen ? "w-[60px] md:w-[80px]" : " w-[500px]"} `}>
-            <ul className="mt-4 ">
-                <Item href="/dashboard" isOpen={isOpen}>
-                    <MdDashboard className={`${isOpen && "text-2xl md:text-3xl lg:text-4xl"} text-primary `} /> <span className={`${isOpen && "hidden"} `} >Dashboard</span>
-                </Item>
-                <Item href="/news-settings" isOpen={isOpen}>
-                    <FaRegNewspaper className={`${isOpen && "text-2xl md:text-3xl lg:text-4xl"} text-primary`} /> <span className={`${isOpen && "hidden"} `}>News</span>
-                </Item>
-                <Item href="/services-settings" isOpen={isOpen}>
-                    <FaHandsHelping className={`${isOpen && "text-2xl md:text-3xl lg:text-4xl"} text-primary`} /> <span className={`${isOpen && "hidden"} `}>Services</span>
-                </Item>
-                <Item href="/gallery-settings" isOpen={isOpen}>
-                    <FaPhotoFilm className={`${isOpen && "text-2xl md:text-3xl lg:text-4xl"} text-primary`} /> <span className={`${isOpen && "hidden"} `}>Galleria</span>
-                </Item>
-                <Item href="/users-settings" isOpen={isOpen}>
-                    <FaUsers className={`${isOpen && "text-2xl md:text-3xl lg:text-4xl"} text-primary `} /> <span className={`${isOpen && "hidden"} `}>Utenti</span>
-                </Item>
-            </ul>
+            <div>
+                <div className={`flex bg-primary justify-end items-center p-1 duration-200 cursor-pointer text-white ${isOpen && "rotate-180"}`} onClick={() => setIsOpen(!isOpen)}>
+                    <IoIosArrowForward size={60} />
+                </div>
+                <ul className="mt-4 ">
+                    <Item href="/dashboard" isOpen={isOpen}>
+                        <MdDashboard className={`${isOpen && "text-2xl md:text-3xl lg:text-4xl"} text-primary `} /> <span className={`${isOpen && "hidden"} `} >Dashboard</span>
+                    </Item>
+                    <Item href="/news-settings" isOpen={isOpen}>
+                        <FaRegNewspaper className={`${isOpen && "text-2xl md:text-3xl lg:text-4xl"} text-primary`} /> <span className={`${isOpen && "hidden"} `}>News</span>
+                    </Item>
+                    <Item href="/services-settings" isOpen={isOpen}>
+                        <FaHandsHelping className={`${isOpen && "text-2xl md:text-3xl lg:text-4xl"} text-primary`} /> <span className={`${isOpen && "hidden"} `}>Services</span>
+                    </Item>
+                    <Item href="/gallery-settings" isOpen={isOpen}>
+                        <FaPhotoFilm className={`${isOpen && "text-2xl md:text-3xl lg:text-4xl"} text-primary`} /> <span className={`${isOpen && "hidden"} `}>Galleria</span>
+                    </Item>
+                    <Item href="/users-settings" isOpen={isOpen}>
+                        <FaUsers className={`${isOpen && "text-2xl md:text-3xl lg:text-4xl"} text-primary `} /> <span className={`${isOpen && "hidden"} `}>Utenti</span>
+                    </Item>
+
+                </ul>
+            </div>
+
 
             {!isOpen && <div>
                 <LogoutButton>
