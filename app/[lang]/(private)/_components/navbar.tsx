@@ -27,7 +27,7 @@ const Navbar = () => {
     return (<>
         <aside className={`flex flex-col justify-between transition-all duration-100 ${isOpen ? "w-[60px] md:w-[80px]" : " w-[300px]"} `}>
             <div>
-                <div className={`flex bg-primary justify-end items-center p-1 cursor-pointer text-white`} onClick={() => setIsOpen(!isOpen)}>
+                <div className={`flex bg-primary items-center p-1 cursor-pointer text-white ${!isOpen ? "justify-end" : "justify-center"}`} onClick={() => setIsOpen(!isOpen)}>
                     <IoIosArrowForward size={60} className={`duration-300  ${isOpen && "rotate-180"}`} />
                 </div>
                 <ul className="mt-4 ">

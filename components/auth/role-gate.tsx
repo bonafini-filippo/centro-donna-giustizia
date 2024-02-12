@@ -1,25 +1,26 @@
-"use client";
-
-import { useCurrentRole } from "@/hooks/use-current-role";
+import { currentRole } from "@/lib/auth";
 import { UserRole } from "@prisma/client";
-import { FormError } from "@/components/form-error";
-
+import Unauthorized from "@/components/unauthorized";
+import { any } from "zod";
 interface RoleGateProps {
     children: React.ReactNode;
-    allowedRole: UserRole;
+    allowedRoles: UserRole[];
 }
 
-export const RoleGate = ({
+export const RoleGate = async ({
     children,
-    allowedRole
+    allowedRoles
 }: RoleGateProps) => {
-    const role = useCurrentRole();
-    if (role !== allowedRole) {
+    const role: any = await currentRole();
+    if (!allowedRoles.includes(role)) {
         return (
-            <FormError message="You do not have permission to view this content" />
-        )
+            <Unauthorized />
+        );
     }
-    return (<>
-        {children}
-    </>)
+
+    return (
+        <>
+            {children}
+        </>
+    );
 }
