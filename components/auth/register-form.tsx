@@ -54,7 +54,7 @@ export const RegisterForm = ({ dictionaries }: any) => {
         <CardWrapper
             headerLabel={registerDict.title}
             backButtonLabel={registerDict.haveAccount}
-            baclButtonHref="/login"
+            backButtonHref="/login"
         >
             <Form {...form}>
                 <form

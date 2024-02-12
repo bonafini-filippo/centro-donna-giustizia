@@ -74,7 +74,7 @@ export const LoginForm = ({ dictionaries, lang }: any) => {
         <CardWrapper
             headerLabel={loginDict.title}
             backButtonLabel={loginDict.noAccount}
-            baclButtonHref="/register"
+            backButtonHref="/register"
         >
             <Form {...form}>
                 <form

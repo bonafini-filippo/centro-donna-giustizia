@@ -57,7 +57,7 @@ export const NewPasswordForm = ({ dictionaries, lang }: any) => {
         <CardWrapper
             headerLabel={newPasswordDict.title}
             backButtonLabel={messages.common.backToLogin}
-            baclButtonHref="/login"
+            backButtonHref="/login"
         >
             <Form {...form}>
                 <form
