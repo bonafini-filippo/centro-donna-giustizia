@@ -11,26 +11,36 @@ import { Button } from "@/components/ui/button";
 import { IoIosArrowForward } from "react-icons/io";
 
 const Item = ({ children, href, isOpen }: { children: React.ReactNode, href: string, isOpen: boolean }) => {
+    const pathname = getPage(usePathname());
     return (
         <li>
-            <Link className={`flex items-center pl-2 hover:bg-black/15 py-2 cursor-pointer gap-2 text-2xl ${isOpen && "flex justify-center items-center pl-0"} `} href={href}>
+            <Link className={`flex items-center hover:bg-black/15 py-2 cursor-pointer gap-2 text-2xl ${isOpen ? "flex justify-center items-center" : "pl-2"} `} href={href}>
                 {children}
             </Link>
         </li>
     )
 };
 
+function getPage(str: string): string {
+    const partiPercorso = str.split('/');
+    const partiPulite = partiPercorso.filter(part => part !== '');
+
+    if (partiPulite.length > 1) {
+        return '/' + partiPulite.slice(1).join('/');
+    } else {
+        return '';
+    }
+}
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState<boolean>(true)
-    const pathname = usePathname();
-
     return (<>
         <aside className={`flex flex-col justify-between transition-all duration-100 ${isOpen ? "w-[60px] md:w-[80px]" : " w-[300px]"} `}>
             <div>
                 <div className={`flex bg-primary items-center p-1 cursor-pointer text-white ${!isOpen ? "justify-end" : "justify-center"}`} onClick={() => setIsOpen(!isOpen)}>
                     <IoIosArrowForward size={60} className={`duration-300  ${isOpen && "rotate-180"}`} />
                 </div>
-                <ul className="mt-4 ">
+                <ul className={`${isOpen ? "mt-11" : "mt-2"}`}>
                     <Item href="/dashboard" isOpen={isOpen}>
                         <MdDashboard className={`${isOpen && "text-2xl md:text-3xl lg:text-4xl"} text-primary `} /> <span className={`${isOpen && "hidden"} `} >Dashboard</span>
                     </Item>
