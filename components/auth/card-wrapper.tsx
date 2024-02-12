@@ -8,14 +8,14 @@ interface CardWrapperProps {
     children: React.ReactNode;
     headerLabel: string;
     backButtonLabel: string;
-    baclButtonHref: string;
+    backButtonHref: string;
 };
 
 export const CardWrapper = ({
     children,
     headerLabel,
     backButtonLabel,
-    baclButtonHref,
+    backButtonHref,
 }: CardWrapperProps) => {
     return (
         <Card>
@@ -29,10 +29,10 @@ export const CardWrapper = ({
                 <div className="flex justify-between w-full">
                     <BackButton
                         label={backButtonLabel}
-                        href={baclButtonHref}
+                        href={backButtonHref}
                     />
                     <BackButton
-                        label="Back to Website"
+                        label="Website"
                         href="/"
                     />
                 </div>
