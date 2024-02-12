@@ -16,7 +16,6 @@ export const CardWrapper = ({
     headerLabel,
     backButtonLabel,
     baclButtonHref,
-
 }: CardWrapperProps) => {
     return (
         <Card>
@@ -27,10 +26,17 @@ export const CardWrapper = ({
                 {children}
             </CardContent>
             <CardFooter>
-                <BackButton
-                    label={backButtonLabel}
-                    href={baclButtonHref}
-                />
+                <div className="flex justify-between w-full">
+                    <BackButton
+                        label={backButtonLabel}
+                        href={baclButtonHref}
+                    />
+                    <BackButton
+                        label="Back to Website"
+                        href="/"
+                    />
+                </div>
+
             </CardFooter>
         </Card>
     )

@@ -35,7 +35,8 @@
             "expiredCode": "Codice scaduto"
         },
         "common": {
-            "backToLogin": "Torna al login"
+            "backToLogin": "Torna al login",
+            "backToPublic": "Zona pubblica"
         }
     },
     "homeDict": {
