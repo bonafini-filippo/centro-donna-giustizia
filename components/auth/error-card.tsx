@@ -6,7 +6,7 @@ export const ErrorCard = ({ messages }: any) => {
     return (
         <CardWrapper
             headerLabel={messages.errors.generic}
-            baclButtonHref="/login"
+            backButtonHref="/login"
             backButtonLabel={messages.common.backToLogin}
         >
             <div className="w-full flex justify-center items-center">
