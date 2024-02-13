@@ -20,8 +20,10 @@ export default async function PrivateLayout({
     return (
         <SessionProvider session={session}>
             <RoleGate allowedRoles={["ADMIN", "EDITOR"]} >
-                <div className='flex relative h-full'>
-                    <Navbar />
+                <div className='flex relative h-full overflow-hidden'>
+                    <div className='flex relative h-full'>
+                        <Navbar />
+                    </div>
                     <main className='bg-zinc-100 flex-grow p-1 md:p-2 lg:p-6'>
                         {children}
                     </main>

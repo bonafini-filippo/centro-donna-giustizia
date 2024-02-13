@@ -7,7 +7,7 @@ import { useCurrentUser } from "@/hooks/use-current-user";
 const GalleryPage = () => {
     const user = useCurrentUser();
     return (
-        <Card>
+        <Card className="w-full h-full overflow-y-auto">
             <CardHeader>
                 <CardTitle className='text-primary text-4xl'>Galleria</CardTitle>
             </CardHeader>

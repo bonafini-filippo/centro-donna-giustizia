@@ -7,9 +7,9 @@ import { useCurrentUser } from "@/hooks/use-current-user";
 const DashboardPage = () => {
     const user = useCurrentUser();
     return (
-        <Card>
+        <Card className="w-full h-full overflow-y-auto">
             <CardHeader>
-                <CardTitle className='text-primary text-4xl'>Dashboard</CardTitle>
+                <CardTitle className='text-primary  text-4xl'>Dashboard</CardTitle>
             </CardHeader>
             <CardContent>
                 contenuto della pagina

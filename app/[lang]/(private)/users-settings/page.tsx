@@ -13,9 +13,11 @@ const page = async ({ params: { lang } }: any) => {
                 <Unauthorized lang={lang} />
             </div>
         ) : (
-            <Card>
+            <Card className="w-full h-full overflow-y-auto">
                 <CardHeader>
-                    <CardTitle className='text-primary text-4xl'>Gestione utenti</CardTitle>
+                    <CardTitle className='text-primary text-4xl'>
+                        Gestione utenti
+                    </CardTitle>
                 </CardHeader>
                 <CardContent>
                     contenuto della pagina
