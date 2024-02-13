@@ -15,7 +15,7 @@ const Item = ({ children, href, isOpen, onClick }: { children: React.ReactNode, 
     return (
         <li>
             <Link
-                className={`flex items-center hover:bg-black/15 py-2 cursor-pointer gap-2 text-2xl ${isOpen ? "flex justify-center items-center" : "pl-6 text-4xl py-4"} `}
+                className={`flex items-center hover:bg-black/15 py-2 cursor-pointer gap-2 text-2xl ${isOpen ? "flex justify-center items-center" : "pl-3 text-4xl md:text-3xl lg:text-2xl py-4 md:py-3 lg:py-1"} `}
                 href={href}
                 onClick={() => {
                     onClick();
