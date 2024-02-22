@@ -1,4 +1,5 @@
 import { UserRole } from "@prisma/client";
+import { Description } from "@radix-ui/react-dialog";
 import * as z from "zod";
 
 export const SettingsSchema = z.object({
@@ -63,4 +64,13 @@ export const RegisterSchema = z.object({
     name: z.string().min(3, {
         message: "Name is required",
     }),
+});
+
+export const NewsSchema = z.object({
+    title: z.string(),
+    description: z.string(),
+    coverImage: z.string(),
+    editor: z.string(),
+    images: z.string(),
+    secondaryDescription: z.string()
 });

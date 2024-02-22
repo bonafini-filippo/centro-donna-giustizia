@@ -2,6 +2,7 @@ import Unauthorized from "@/components/unauthorized"
 import { currentRole } from "@/lib/auth"
 import Title from "../_components/title"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import UserTable from "./_components/user-table"
 
 const page = async ({ params: { lang } }: any) => {
 
@@ -20,7 +21,7 @@ const page = async ({ params: { lang } }: any) => {
                     </CardTitle>
                 </CardHeader>
                 <CardContent>
-                    contenuto della pagina
+                    <UserTable />
                 </CardContent>
             </Card>
         )

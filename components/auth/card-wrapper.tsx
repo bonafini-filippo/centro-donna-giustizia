@@ -9,6 +9,7 @@ interface CardWrapperProps {
     headerLabel: string;
     backButtonLabel: string;
     backButtonHref: string;
+    footer?: true
 };
 
 export const CardWrapper = ({
@@ -16,6 +17,7 @@ export const CardWrapper = ({
     headerLabel,
     backButtonLabel,
     backButtonHref,
+    footer,
 }: CardWrapperProps) => {
     return (
         <Card>
@@ -25,7 +27,7 @@ export const CardWrapper = ({
             <CardContent>
                 {children}
             </CardContent>
-            <CardFooter>
+            {footer ?? <CardFooter>
                 <div className="flex justify-between w-full">
                     <BackButton
                         label={backButtonLabel}
@@ -37,7 +39,7 @@ export const CardWrapper = ({
                     />
                 </div>
 
-            </CardFooter>
+            </CardFooter>}
         </Card>
     )
 }

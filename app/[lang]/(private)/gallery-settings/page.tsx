@@ -12,7 +12,7 @@ const GalleryPage = () => {
                 <CardTitle className='text-primary text-4xl'>Galleria</CardTitle>
             </CardHeader>
             <CardContent>
-                contenuto della pagina
+                Coming soon..
             </CardContent>
         </Card>
     );
