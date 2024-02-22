@@ -72,5 +72,7 @@ export const NewsSchema = z.object({
     coverImage: z.string(),
     editor: z.string(),
     images: z.string(),
-    secondaryDescription: z.string()
+    secondaryDescription: z.string(),
+    visible: z.boolean(),
+    date: z.string(),
 });

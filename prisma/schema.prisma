@@ -83,12 +83,13 @@ model TwoFactorConfirmation {
 }
 
 model News {
-  id                   String  @id @default(cuid())
-  visible              Boolean @default(true)
+  id                   String   @id @default(cuid())
+  visible              Boolean  @default(true)
   title                String
   description          String
   secondaryDescription String?
   editor               String?
   coverImage           String
   images               String?
+  date                 DateTime
 }

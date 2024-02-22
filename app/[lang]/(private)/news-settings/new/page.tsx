@@ -34,15 +34,18 @@ const NewNews = () => {
         resolver: zodResolver(NewsSchema),
         defaultValues: {
             title: "",
+            visible: true,
             description: "",
             coverImage: "",
             editor: "",
             images: "",
             secondaryDescription: "",
+            date: ""
         },
     });
 
     const onSubmit = (values: z.infer<typeof NewsSchema>) => {
+
         setError("");
         setSuccess("");
 
@@ -108,7 +111,23 @@ const NewNews = () => {
                                     <FormLabel>Testo dell'articolo</FormLabel>
                                     <FormControl>
                                         <Textarea
+                                            {...field}
+                                            disabled={isPending}
+                                            placeholder="testo"
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )} />
 
+                        <FormField
+                            control={form.control}
+                            name="editor"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Editore</FormLabel>
+                                    <FormControl>
+                                        <Input
                                             {...field}
                                             disabled={isPending}
                                             placeholder="testo"
@@ -119,12 +138,13 @@ const NewNews = () => {
                             )} />
                         <FormField
                             control={form.control}
-                            name="editor"
+                            name="date"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Editore</FormLabel>
+                                    <FormLabel>Data</FormLabel>
                                     <FormControl>
                                         <Input
+                                            type="date"
                                             {...field}
                                             disabled={isPending}
                                             placeholder="testo"
