@@ -4,6 +4,7 @@ import { NewsSchema } from "@/schemas";
 import * as z from "zod";
 
 export const CreateNews = async (values: z.infer<typeof NewsSchema>) => {
+
     try {
         // Validazione dei campi con Zod
         const validatedFields = NewsSchema.parse(values);
@@ -16,7 +17,8 @@ export const CreateNews = async (values: z.infer<typeof NewsSchema>) => {
                 coverImage: validatedFields.coverImage,
                 editor: validatedFields.editor,
                 images: validatedFields.images,
-                secondaryDescription: validatedFields.secondaryDescription
+                secondaryDescription: validatedFields.secondaryDescription,
+                date: validatedFields.date
             },
         });
 
