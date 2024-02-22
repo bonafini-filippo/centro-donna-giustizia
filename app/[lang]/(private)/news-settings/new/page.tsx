@@ -108,7 +108,7 @@ const NewNews = () => {
                             name="secondaryDescription"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Testo dell'articolo</FormLabel>
+                                    <FormLabel>Testo articolo</FormLabel>
                                     <FormControl>
                                         <Textarea
                                             {...field}
