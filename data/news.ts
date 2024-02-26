@@ -9,6 +9,17 @@ export const getAllNews = async () => {
     }
 }
 
+export const getNewsById = async (id: any) => {
+    try {
+        const news = await db.news.findFirst({
+            where: { id }
+        });
+        return news;
+    } catch {
+        return null
+    }
+}
+
 
 export const getAllVisibleNews = async () => {
     try {

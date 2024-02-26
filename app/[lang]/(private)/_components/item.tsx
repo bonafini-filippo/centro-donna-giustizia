@@ -9,6 +9,9 @@ import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import ShowButton from "../news-settings/_components/show-button";
 import DeleteButton from "../news-settings/_components/delete-button";
+import Link from "next/link";
+
+
 const anton = Anton({
     subsets: ['latin'],
     weight: "400"
@@ -41,10 +44,11 @@ export function ItemCard({ id, title, par, image, alt, reverse, enabled }: any) 
                     <div className='flex justify-end flex-wrap gap-4 mt-11 z-50'>
                         <ShowButton id={id} status={enabled}>
                             <Button onClick={toggleVisible} variant={!visible ? "dark" : "outline"} className={`${anton.className} text-2xl uppercase space-x-2 w-full xl:w-auto p-6`}>
-                                <span>{!visible ? "Nascondi" : "mostra"}</span>
-                                {!visible ? <FaEyeSlash /> : <FaEye />}
+                                <span>{visible ? "Nascondi" : "mostra"}</span>
+                                {visible ? <FaEyeSlash /> : <FaEye />}
                             </Button>
                         </ShowButton>
+
                         <DeleteButton id={id} onClick={() => setDeleted(true)}>
                             <Button variant="destructive" className={`${anton.className} text-2xl uppercase space-x-2 w-full xl:w-auto p-6`}>
                                 <span>ELIMINA</span>
@@ -52,10 +56,13 @@ export function ItemCard({ id, title, par, image, alt, reverse, enabled }: any) 
                             </Button>
                         </DeleteButton>
 
-                        <Button variant="yellow" className={`${anton.className} text-2xl uppercase space-x-2 w-full xl:w-auto  p-6`}>
-                            <span>MODIFICA</span>
-                            <MdEdit />
-                        </Button>
+                        <Link href="/news-settings/edit">
+                            <Button variant="yellow" className={`${anton.className} text-2xl uppercase space-x-2 w-full xl:w-auto  p-6`}>
+                                <span>MODIFICA</span>
+                                <MdEdit />
+                            </Button>
+                        </Link>
+
                     </div>
                 </div>
 
