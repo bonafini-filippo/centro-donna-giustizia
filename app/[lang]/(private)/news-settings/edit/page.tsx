@@ -25,13 +25,15 @@ const EditNews = async ({ searchParams }: any) => {
                 <EditForm news={news} />
                 :
                 <div>
-                    <span>Errore nel trovare l'articolo</span>
+                    <span>Errore nel trovare la news</span>
                 </div>}
 
 
             <div className="pt-3 w-full  flex justify-end">
                 <Link href="/news-settings">
-                    <Button variant="link">Indietro</Button>
+                    <Button variant="link">
+                        Indietro
+                    </Button>
                 </Link>
             </div>
 
