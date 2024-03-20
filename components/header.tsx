@@ -46,10 +46,10 @@ export default function Header({ dictionaries, lang }: any) {
                         const page = pages[key];
                         return (
                             <Button
-                                className={`text-4xl md:text-base ${pathname === "" || pathname === page.href ? "text-white" : "text-black"}`}
+                                className={`text-4xl md:text-base ${(pathname === "" ? (openMenu && "text-white") : (openMenu && "text-black"))}`}
                                 key={page.label}
                                 asChild
-                                variant={pathname !== page.href ? "link" : "default"}
+                                variant={pathname !== page.href ? "link" : "underline"}
                                 onClick={toggleMenu}
                             >
                                 <Link href={`/${lang}/${page.href}`}>
@@ -61,8 +61,8 @@ export default function Header({ dictionaries, lang }: any) {
                 </div>
                 <div className="w-[72px] md:hidden flex justify-center items-center z-50 cursor-pointer" onClick={toggleMenu}>
                     {openMenu ?
-                        <IoCloseOutline className="text-white w-12 h-12 " /> :
-                        <CiMenuBurger className="text-white  w-12 h-12 " />
+                        <IoCloseOutline className={`text-white w-12 h-12 `} /> :
+                        <CiMenuBurger className={`${pathname === "" ? "text-white" : "text-black"}  w-12 h-12 `} />
                     }
                 </div>
             </nav>
