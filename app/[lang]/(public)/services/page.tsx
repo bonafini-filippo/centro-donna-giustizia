@@ -6,7 +6,7 @@ export const metadata: Metadata = MetadataServicesPage;
 
 const ServicesPage = () => {
     return (
-        <div className="mt-28">
+        <div className="mt-32">
             <Services />
         </div>);
 };
