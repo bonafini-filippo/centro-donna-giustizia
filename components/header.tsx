@@ -24,6 +24,9 @@ export default function Header({ dictionaries, lang }: any) {
     const toggleMenu = () => {
         setOpenMenu(!openMenu);
     };
+    const closeMenu = () => {
+        setOpenMenu(false);
+    };
 
     return (
         <header className={` ${anton.className} flex absolute top-0 right-0 left-0 `}>
@@ -46,11 +49,11 @@ export default function Header({ dictionaries, lang }: any) {
                         const page = pages[key];
                         return (
                             <Button
-                                className={`text-4xl md:text-base ${(pathname === "" ? (openMenu && "text-white") : (openMenu && "text-black"))}`}
+                                className={`text-4xl md:text-base ${(pathname === "" ? (openMenu ? "text-white" : "text-white") : (openMenu ? "text-white" : "text-black"))}`}
                                 key={page.label}
                                 asChild
                                 variant={pathname !== page.href ? "link" : "underline"}
-                                onClick={toggleMenu}
+                                onClick={closeMenu}
                             >
                                 <Link href={`/${lang}/${page.href}`}>
                                     <span className="text-5xl md:text-2xl uppercase"> {page.label}</span>
