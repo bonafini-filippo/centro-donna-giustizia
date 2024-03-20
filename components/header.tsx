@@ -16,7 +16,9 @@ const anton = Anton({
 export default function Header({ dictionaries, lang }: any) {
     const { pages } = dictionaries;
 
-    const pathname = usePathname();
+    const pathnameLang = usePathname();
+    const pathname = pathnameLang.replace(/^\/[a-z]{2}\b/, '');
+
     const [openMenu, setOpenMenu] = useState<boolean>(false);
 
     const toggleMenu = () => {
@@ -24,7 +26,7 @@ export default function Header({ dictionaries, lang }: any) {
     };
 
     return (
-        <header className={` ${anton.className} flex absolute top-0 right-0 left-0  bg-black`}>
+        <header className={` ${anton.className} flex absolute top-0 right-0 left-0 `}>
 
             <nav className="flex items-center md:justify-normal justify-between flex-grow md:flex-row md:gap-x-4 mt-12 pb-12">
                 <div className="flex z-50 ">
@@ -44,10 +46,10 @@ export default function Header({ dictionaries, lang }: any) {
                         const page = pages[key];
                         return (
                             <Button
-                                className="text-4xl md:text-base text-white "
+                                className={`text-4xl md:text-base ${pathname === "" || pathname === page.href ? "text-white" : "text-black"}`}
                                 key={page.label}
                                 asChild
-                                variant={pathname === page.href ? "link" : "link"}
+                                variant={pathname !== page.href ? "link" : "default"}
                                 onClick={toggleMenu}
                             >
                                 <Link href={`/${lang}/${page.href}`}>
@@ -66,6 +68,6 @@ export default function Header({ dictionaries, lang }: any) {
             </nav>
 
 
-        </header>
+        </header >
     )
 }

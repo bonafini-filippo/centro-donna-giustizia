@@ -6,7 +6,7 @@ export const metadata: Metadata = MetadataAboutPage;
 const AboutPage = () => {
     return (
 
-        <div>AboutPage</div>
+        <>chi siamo</>
     );
 };
 
