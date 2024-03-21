@@ -1,5 +1,6 @@
 import { MetadataMissionPage } from "@/lib/pages";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = MetadataMissionPage;
 
@@ -11,103 +12,152 @@ const MissionPage = () => {
                     <section>
                         <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                             <div className="lg:col-start-2">
-                                <h1 className="text-2xl font-bold tracki sm:text-3xl ">Eam nibh gloriatur ex</h1>
-                                <p className="mt-3 text-lg ">Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nibh dissentias, mei exerci tamquam euripidis cu.</p>
+                                <h1 className="text-2xl font-bold tracki sm:text-3xl text-primary ">Assistenza e Sostegno alle Vittime di Violenza</h1>
                                 <div className="mt-12 space-y-12">
                                     <div className="flex">
                                         <div className="flex-shrink-0">
                                             <div className="flex items-center justify-center w-12 h-12 rounded-md">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div className="ml-4">
-                                            <h4 className="text-lg font-medium leadi ">Cibo augue offendit has ad</h4>
-                                            <p className="mt-2 ">An per velit appellantur, ut utinam minimum nominavi sit, odio nostro habemus ne nec. Ne sonet regione contentiones est.</p>
+                                            <h4 className="text-lg font-medium leadi ">Supporto Completo</h4>
+                                            <p className="mt-2 ">Fornire supporto legale, psicologico ed emotivo alle donne e ai minori colpiti da violenza.</p>
                                         </div>
                                     </div>
                                     <div className="flex">
                                         <div className="flex-shrink-0">
                                             <div className="flex items-center justify-center w-12 h-12 rounded-md ">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div className="ml-4">
-                                            <h4 className="text-lg font-medium leadi ">At eum ferri luptatum lobortis</h4>
-                                            <p className="mt-2 ">Te per quidam maiorum ocurreret, etiam delicatissimi usu ad. Ne has quod periculis. Te sit primis iisque efficiantur.</p>
+                                            <h4 className="text-lg font-medium leadi ">Ambiente protetto</h4>
+                                            <p className="mt-2 ">Garantire un ambiente sicuro e rispettoso dove le vittime possono trovare ascolto e supporto.</p>
                                         </div>
                                     </div>
                                     <div className="flex">
                                         <div className="flex-shrink-0">
                                             <div className="flex items-center justify-center w-12 h-12 rounded-md ">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div className="ml-4">
-                                            <h4 className="text-lg font-medium leadi ">Dicunt verterem evertitur eu sea</h4>
-                                            <p className="mt-2 ">Audire principes rationibus eam an, autem nominavi luptatum per te. Sumo fabulas vim eu, sonet saperet eleifend ut vix.</p>
+                                            <h4 className="text-lg font-medium leadi ">Promozione dell'autonomia</h4>
+                                            <p className="mt-2 ">Promuovere l'autonomia e la ripresa delle vittime attraverso programmi di assistenza personalizzati.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
-                                <img src="https://source.unsplash.com/random/500x500" alt="" className="mx-auto rounded-lg shadow-lg " />
+                                <Image src="/mission1.png" width={500} height={500} alt="La nostra missione" className="mx-auto rounded-lg shadow-lg " />
                             </div>
                         </div>
                     </section>
                     <section className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                         <div>
-                            <h1 className="text-2xl font-bold tracki sm:text-3xl ">Ad vix debet docendi</h1>
-                            <p className="mt-3 text-lg ">Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.</p>
+                            <h1 className="text-2xl text-primary font-bold tracki sm:text-3xl ">Sensibilizzazione e Prevenzione della Violenza di Genere</h1>
                             <div className="mt-12 space-y-12">
                                 <div className="flex">
                                     <div className="flex-shrink-0">
                                         <div className="flex items-center justify-center w-12 h-12 rounded-md ">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                             </svg>
                                         </div>
                                     </div>
                                     <div className="ml-4">
-                                        <h4 className="text-lg font-medium leadi ">Per ei quaeque sensibus</h4>
-                                        <p className="mt-2 ">Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.</p>
+                                        <h4 className="text-lg font-medium leadi ">Educazione e Sensibilizzazione Comunitaria</h4>
+                                        <p className="mt-2 ">Condurre attività educative e informative per sensibilizzare la comunità sulla violenza contro le donne e i minori.</p>
                                     </div>
                                 </div>
                                 <div className="flex">
                                     <div className="flex-shrink-0">
                                         <div className="flex items-center justify-center w-12 h-12 rounded-md ">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                             </svg>
                                         </div>
                                     </div>
                                     <div className="ml-4">
-                                        <h4 className="text-lg font-medium leadi ">Cu imperdiet posidonium sed</h4>
-                                        <p className="mt-2 ">Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.</p>
+                                        <h4 className="text-lg font-medium leadi ">Formazione per la Consapevolezza</h4>
+                                        <p className="mt-2 ">Offrire formazione per riconoscere e affrontare situazioni di abuso e discriminazione.</p>
                                     </div>
                                 </div>
                                 <div className="flex">
                                     <div className="flex-shrink-0">
                                         <div className="flex items-center justify-center w-12 h-12 rounded-md ">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                             </svg>
                                         </div>
                                     </div>
                                     <div className="ml-4">
-                                        <h4 className="text-lg font-medium leadi ">Nulla omittam sadipscing mel ne</h4>
-                                        <p className="mt-2 ">At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.</p>
+                                        <h4 className="text-lg font-medium leadi ">Collaborazione per la Prevenzione</h4>
+                                        <p className="mt-2 ">Collaborare con istituzioni locali e organizzazioni per implementare politiche e iniziative di prevenzione della violenza.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div aria-hidden="true" className="mt-10 lg:mt-0">
-                            <img src="https://source.unsplash.com/random/500x500" alt="" className="mx-auto rounded-lg shadow-lg " />
+                            <Image src="/mission3.png" width={500} height={500} alt="La nostra missione" className="mx-auto rounded-lg shadow-lg " />
+                        </div>
+                    </section>
+                    <section>
+                        <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+                            <div className="lg:col-start-2">
+                                <h1 className="text-2xl font-bold tracki sm:text-3xl text-primary ">Promozione dell'Empowerment Femminile</h1>
+                                <div className="mt-12 space-y-12">
+                                    <div className="flex">
+                                        <div className="flex-shrink-0">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-md">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="text-lg font-medium leadi ">Promozione dell'Auto-Assertività</h4>
+                                            <p className="mt-2 ">Promuovere l'auto-assertività e l'autonomia delle donne attraverso programmi di empowerment.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex">
+                                        <div className="flex-shrink-0">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-md ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="text-lg font-medium leadi ">Partecipazione Attiva delle Donne</h4>
+                                            <p className="mt-2 ">Favorire la partecipazione attiva delle donne nella società e nella presa di decisioni.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex">
+                                        <div className="flex-shrink-0">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-md ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="text-lg font-medium leadi ">Fornire Strumenti per il Superamento</h4>
+                                            <p className="mt-2 ">Offrire risorse pratiche e strumenti per aiutare le donne a superare situazioni di violenza e adottare uno stile di vita indipendente e sicuro.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
+                                <Image src="/mission2.png" width={500} height={500} alt="La nostra missione" className="mx-auto rounded-lg shadow-lg " />
+                            </div>
                         </div>
                     </section>
 

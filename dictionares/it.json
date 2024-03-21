@@ -15,10 +15,6 @@
         "services": {
             "label": "Servizi",
             "href": "/services"
-        },
-        "projects": {
-            "label": "Progetti",
-            "href": "/projects"
         }
     },
     "userMenu": {

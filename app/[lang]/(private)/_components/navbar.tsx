@@ -70,6 +70,10 @@ const Navbar = () => {
 
 
             {!isOpen && <div>
+                < Link href="/" className="flex justify-center items-center py-5 bg-secondary text-xl hover:underline">
+                    <span>Torna al sito</span>
+                </Link>
+
                 <LogoutButton>
                     <div className="flex justify-center text-white items-center gap-2 text-2xl py-4 hover:bg-primary/40 bg-primary">
                         <span className={`${isOpen && "hidden"} `}>Logout</span>

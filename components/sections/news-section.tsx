@@ -25,7 +25,7 @@ export default async function NewsSection({ title, actionLab, actionUrl, seconda
     return (
         <section className={`${anton.className} scrolbar text-center  relative -top-32 z-50 -mb-28`}>
             <div>
-                <h1 className="text-white text-6xl mb-10">ULTIME NOTIZIE</h1>
+                <h1 className="text-white text-6xl mb-2">ULTIME NOTIZIE</h1>
             </div>
             <LastNews news={news} />
         </section >

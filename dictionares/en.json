@@ -15,10 +15,6 @@
         "services": {
             "label": "Services",
             "href": "/services"
-        },
-        "projects": {
-            "label": "Projects",
-            "href": "/projects"
         }
     },
     "userMenu": {
