@@ -49,8 +49,8 @@ const MissionPage = () => {
                                             </div>
                                         </div>
                                         <div className="ml-4">
-                                            <h4 className="text-lg font-medium leadi ">Promozione dell'autonomia</h4>
-                                            <p className="mt-2 ">Promuovere l'autonomia e la ripresa delle vittime attraverso programmi di assistenza personalizzati.</p>
+                                            <h4 className="text-lg font-medium leadi ">Promozione dell&apos;autonomia</h4>
+                                            <p className="mt-2 ">Promuovere l&apos;autonomia e la ripresa delle vittime attraverso programmi di assistenza personalizzati.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@ const MissionPage = () => {
                     <section>
                         <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                             <div className="lg:col-start-2">
-                                <h1 className="text-2xl font-bold tracki sm:text-3xl text-primary ">Promozione dell'Empowerment Femminile</h1>
+                                <h1 className="text-2xl font-bold tracki sm:text-3xl text-primary ">Promozione dell&apos;Empowerment Femminile</h1>
                                 <div className="mt-12 space-y-12">
                                     <div className="flex">
                                         <div className="flex-shrink-0">
@@ -123,8 +123,8 @@ const MissionPage = () => {
                                             </div>
                                         </div>
                                         <div className="ml-4">
-                                            <h4 className="text-lg font-medium leadi ">Promozione dell'Auto-Assertività</h4>
-                                            <p className="mt-2 ">Promuovere l'auto-assertività e l'autonomia delle donne attraverso programmi di empowerment.</p>
+                                            <h4 className="text-lg font-medium leadi ">Promozione dell&apos;Auto-Assertività</h4>
+                                            <p className="mt-2 ">Promuovere l&apos;auto-assertività e l&apos;autonomia delle donne attraverso programmi di empowerment.</p>
                                         </div>
                                     </div>
                                     <div className="flex">
