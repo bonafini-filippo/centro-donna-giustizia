@@ -22,6 +22,7 @@ const AboutPage = () => {
                     <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-primary pb-4">La nostra storia</h1>
                     <p className="font-normal text-base leading-6 text-gray-600 ">Nel 1981 nasce il Gruppo Donne e Giustizia per contrastare la violenza contro le donne. Si evolve nel tempo affrontando varie forme di abuso, offrendo ascolto, supporto, consulenza legale, e ampliando i servizi con "Telefono Donna" nel 1989 e "Consulenza Psicologica" nel 1993. Nel dicembre 1993 diventa il "Centro Donna Giustizia", iscritto agli albi regionali e nazionali. Dal 2009 è un&apos;Associazione di Promozione Sociale.</p>
                 </div>
+
                 <div className="w-full lg:w-8/12 lg:pt-8">
                     <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
                         <div className="p-4 pb-6 flex justify-center flex-col items-center">
