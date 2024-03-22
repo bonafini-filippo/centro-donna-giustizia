@@ -1,6 +1,7 @@
 import { MetadataMissionPage } from "@/lib/pages";
 import { Metadata } from "next";
 import Image from "next/image";
+import { FaCheck } from "react-icons/fa";
 
 export const metadata: Metadata = MetadataMissionPage;
 
@@ -17,9 +18,7 @@ const MissionPage = () => {
                                     <div className="flex">
                                         <div className="flex-shrink-0">
                                             <div className="flex items-center justify-center w-12 h-12 rounded-md">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
+                                                <FaCheck size={36} className="text-primary" />
                                             </div>
                                         </div>
                                         <div className="ml-4">
@@ -30,9 +29,7 @@ const MissionPage = () => {
                                     <div className="flex">
                                         <div className="flex-shrink-0">
                                             <div className="flex items-center justify-center w-12 h-12 rounded-md ">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
+                                                <FaCheck size={36} className="text-primary" />
                                             </div>
                                         </div>
                                         <div className="ml-4">
@@ -43,9 +40,7 @@ const MissionPage = () => {
                                     <div className="flex">
                                         <div className="flex-shrink-0">
                                             <div className="flex items-center justify-center w-12 h-12 rounded-md ">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
+                                                <FaCheck size={36} className="text-primary" />
                                             </div>
                                         </div>
                                         <div className="ml-4">
@@ -67,9 +62,7 @@ const MissionPage = () => {
                                 <div className="flex">
                                     <div className="flex-shrink-0">
                                         <div className="flex items-center justify-center w-12 h-12 rounded-md ">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                            </svg>
+                                            <FaCheck size={36} className="text-primary" />
                                         </div>
                                     </div>
                                     <div className="ml-4">
@@ -80,9 +73,7 @@ const MissionPage = () => {
                                 <div className="flex">
                                     <div className="flex-shrink-0">
                                         <div className="flex items-center justify-center w-12 h-12 rounded-md ">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                            </svg>
+                                            <FaCheck size={36} className="text-primary" />
                                         </div>
                                     </div>
                                     <div className="ml-4">
@@ -93,9 +84,7 @@ const MissionPage = () => {
                                 <div className="flex">
                                     <div className="flex-shrink-0">
                                         <div className="flex items-center justify-center w-12 h-12 rounded-md ">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                            </svg>
+                                            <FaCheck size={36} className="text-primary" />
                                         </div>
                                     </div>
                                     <div className="ml-4">
@@ -117,9 +106,7 @@ const MissionPage = () => {
                                     <div className="flex">
                                         <div className="flex-shrink-0">
                                             <div className="flex items-center justify-center w-12 h-12 rounded-md">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
+                                                <FaCheck size={36} className="text-primary" />
                                             </div>
                                         </div>
                                         <div className="ml-4">
@@ -130,9 +117,7 @@ const MissionPage = () => {
                                     <div className="flex">
                                         <div className="flex-shrink-0">
                                             <div className="flex items-center justify-center w-12 h-12 rounded-md ">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
+                                                <FaCheck size={36} className="text-primary" />
                                             </div>
                                         </div>
                                         <div className="ml-4">
@@ -143,9 +128,7 @@ const MissionPage = () => {
                                     <div className="flex">
                                         <div className="flex-shrink-0">
                                             <div className="flex items-center justify-center w-12 h-12 rounded-md ">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-15 h-15 text-primary ">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
+                                                <FaCheck size={36} className="text-primary" />
                                             </div>
                                         </div>
                                         <div className="ml-4">
