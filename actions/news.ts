@@ -1,6 +1,7 @@
 "use server"
 import { db } from "@/lib/db";
 import { NewsSchema } from "@/schemas";
+import slugify from "slugify";
 import * as z from "zod";
 
 export const CreateNews = async (values: z.infer<typeof NewsSchema>) => {
@@ -8,7 +9,8 @@ export const CreateNews = async (values: z.infer<typeof NewsSchema>) => {
     try {
         // Validazione dei campi con Zod
         const validatedFields = NewsSchema.parse(values);
-
+        const titleMin = validatedFields.title.toLowerCase()
+        const slug = slugify(titleMin)
         // Creazione del record nel database utilizzando Prisma
         await db.news.create({
             data: {
@@ -18,10 +20,11 @@ export const CreateNews = async (values: z.infer<typeof NewsSchema>) => {
                 editor: validatedFields.editor,
                 images: validatedFields.images,
                 secondaryDescription: validatedFields.secondaryDescription,
-                date: validatedFields.date
+                date: validatedFields.date,
+                slug: slug
             },
         });
-
+        console.log(slug)
     } catch (error) {
         // Gestisci eventuali errori di validazione o del database
         console.error("Errore durante la creazione della notizia:", error);
@@ -33,7 +36,8 @@ export const EditNews = async (id: string, values: z.infer<typeof NewsSchema>) =
     try {
         // Validazione dei campi con Zod
         const validatedFields = NewsSchema.parse(values);
-
+        const titleMin = validatedFields.title.toLowerCase()
+        const slug = slugify(titleMin)
         // modifica del record nel database utilizzando Prisma
         await db.news.update({
             where: {
@@ -46,7 +50,8 @@ export const EditNews = async (id: string, values: z.infer<typeof NewsSchema>) =
                 coverImage: validatedFields.coverImage,
                 editor: validatedFields.editor,
                 images: validatedFields.images,
-                secondaryDescription: validatedFields.secondaryDescription
+                secondaryDescription: validatedFields.secondaryDescription,
+                slug: slug
             }
         });
 

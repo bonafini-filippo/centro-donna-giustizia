@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Button } from './ui/button';
 import { Anton } from 'next/font/google';
 import { IoMdArrowRoundForward } from 'react-icons/io';
+import Link from 'next/link';
 
 const anton = Anton({
     subsets: ['latin'],
@@ -67,12 +68,15 @@ export default function ServicesPeview() {
                 par="Questo è un testo riempitivo per capire il situlatato finale come possa prendere le sembianze, senza pensare di inserire testi già completi e prodotti. Qa ci andrà una breve descrizione del contesto generale della sezione."
 
             />
-            <Card className={`flex justify-center items-center rounded-xl w-full max-w-[1200px] hover:bg-black/15 cursor-pointer text-black  bg-[#DFDFDF]`}>
-                <h2 className={`${anton.className} text-3xl uppercase text-left my-3 flex justify-center items-center gap-2`}>
-                    <span>MOSTRA TUTTI I SERVIZI</span>
-                    <IoMdArrowRoundForward size={43} />
-                </h2>
-            </Card>
+            <Link href="/services" className='w-full flex justify-center items-center'>
+                <Card className={` rounded-xl w-full max-w-[1200px] hover:bg-black/15 cursor-pointer text-black  bg-[#DFDFDF]`}>
+                    <h2 className={`${anton.className} text-3xl uppercase text-left my-3 flex justify-center items-center gap-2`}>
+                        <span>MOSTRA TUTTI I SERVIZI</span>
+                        <IoMdArrowRoundForward size={43} />
+                    </h2>
+                </Card>
+            </Link>
+
         </div>
     );
 }

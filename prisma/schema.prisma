@@ -92,4 +92,5 @@ model News {
   coverImage           String
   images               String?
   date                 String
+  slug                 String
 }

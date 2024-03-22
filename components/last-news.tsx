@@ -4,8 +4,14 @@ import Image from 'next/image';
 import { Button } from './ui/button';
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { FaPlay } from "react-icons/fa";
+import Link from 'next/link';
+import slugify from 'slugify';
 
 export function NewsCard({ title, description, image, alt }: any) {
+
+    const minTitle = title.toLowerCase();
+    const slug = slugify(minTitle);
+
     return (
         <Card className='w-[270px] flex flex-col  flex-shrink-0 overflow-hidden'>
             <Image width={270} height={250} src={image} alt={alt} className='h-[200px] object-cover' />
@@ -15,10 +21,12 @@ export function NewsCard({ title, description, image, alt }: any) {
             </div>
 
             <div className='flex justify-end'>
-                <Button variant="dark" className='text-xl m-3 space-x-2'>
-                    <span>LEGGI DI PIU</span>
-                    <IoMdArrowRoundForward />
-                </Button>
+                <Link href={`/news/${slug}`}>
+                    <Button variant="dark" className='text-xl m-3 space-x-2'>
+                        <span>LEGGI DI PIU</span>
+                        <IoMdArrowRoundForward />
+                    </Button>
+                </Link>
             </div>
 
         </Card>
