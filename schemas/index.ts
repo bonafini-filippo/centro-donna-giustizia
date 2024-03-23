@@ -76,3 +76,7 @@ export const NewsSchema = z.object({
     visible: z.boolean(),
     date: z.string(),
 });
+
+export const RoleSchema = z.object({
+    role: z.enum([UserRole.ADMIN, UserRole.USER, UserRole.EDITOR])
+})

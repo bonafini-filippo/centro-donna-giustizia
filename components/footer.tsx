@@ -8,7 +8,7 @@ export default function Footer({ dictionaries, lang }: any) {
     return (
         <footer className="p-4 bg-zinc-50 md:p-8 lg:p-10 dark:bg-gray-800">
             <div className="mx-auto max-w-screen-xl text-center">
-                <p className="my-6 text-gray-500 dark:text-gray-400">Il sito web perfetto per la tua attività</p>
+                <p className="my-6 text-gray-500 dark:text-gray-400">Centro Donna Giustizia</p>
                 <nav>
                     <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
                         {Object.keys(pages).map(key => {

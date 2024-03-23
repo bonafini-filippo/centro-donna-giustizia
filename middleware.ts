@@ -59,8 +59,8 @@ const middleware = auth((req) => {
     const isLoggedIn = !!req.auth;
 
     const isApiAuthRoute = nextUrl.pathname.startsWith(apiAuthPrefix);
-    const isDynamicRoute = publicDynamicRoutes.some(route => nextUrl.pathname.startsWith(route));
-
+/*     const isDynamicRoute = publicDynamicRoutes.some(route => nextUrl.pathname.startsWith(route));
+ */    const isDynamicRoute = withLanguage(publicDynamicRoutes, `/${locale}`).some(route => nextUrl.pathname.startsWith(route));
     const isPublicRoute = withLanguage(publicRoutes, `/${locale}`).includes(nextUrl.pathname);
     const isAuthRoute = withLanguage(authRoutes, `/${locale}`).includes(nextUrl.pathname);
 
@@ -77,6 +77,10 @@ const middleware = auth((req) => {
         );
     }
 
+    if (isDynamicRoute) {
+        return null
+    }
+
     if (isAuthRoute) {
         if (isLoggedIn) {
             return Response.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl))
@@ -85,7 +89,8 @@ const middleware = auth((req) => {
     }
 
 
-    if (!isLoggedIn && !isPublicRoute && isDynamicRoute) {
+
+    if (!isLoggedIn && !isPublicRoute && !isDynamicRoute) {
         let callbackUrl = nextUrl.pathname;
         if (nextUrl.search) {
             callbackUrl += nextUrl.search;
