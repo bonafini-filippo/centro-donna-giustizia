@@ -5,7 +5,9 @@ export const metadata: Metadata = MetadataContactsPage;
 
 const ContactsPage = () => {
     return (
-        <div>contact page</div>
+        <div className="my-32 flex justify-center items-center text-4xl pt-20 text-primary font-bold">
+            COMING SOON..
+        </div>
     );
 };
 

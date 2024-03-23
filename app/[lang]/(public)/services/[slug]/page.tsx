@@ -2,13 +2,13 @@
 import { getNewsBySlug } from "@/data/news";
 import Image from "next/image";
 import { NotFound } from "../_components/not-found";
-interface NewsPageProps {
+interface ServicesPageProps {
     params: {
         slug: string;
     }
 }
 
-export default async function Newspage({ params }: NewsPageProps) {
+export default async function ServicePage({ params }: ServicesPageProps) {
 
     const news = await getNewsBySlug(params.slug)
 

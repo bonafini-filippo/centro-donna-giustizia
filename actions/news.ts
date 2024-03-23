@@ -24,7 +24,6 @@ export const CreateNews = async (values: z.infer<typeof NewsSchema>) => {
                 slug: slug
             },
         });
-        console.log(slug)
     } catch (error) {
         // Gestisci eventuali errori di validazione o del database
         console.error("Errore durante la creazione della notizia:", error);

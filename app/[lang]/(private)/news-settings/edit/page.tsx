@@ -11,7 +11,6 @@ const EditNews = async ({ searchParams }: any) => {
 
 
     const news = await getNewsById(searchParams.NewsId)
-    console.log(news)
 
     return (
         <CardWrapper

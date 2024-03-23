@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Button } from './ui/button';
 import { Anton } from 'next/font/google';
 import { IoMdArrowRoundForward } from 'react-icons/io';
+import Link from 'next/link';
 
 const anton = Anton({
     subsets: ['latin'],
@@ -27,12 +28,12 @@ export function NewsCard({ title, par, image, alt, reverse }: any) {
                     <p className='text-lg flex-grow'>{par}</p>
 
 
-                    <div className='flex justify-end mt-8'>
+                    <Link href="/services/test" className='flex justify-end mt-8'>
                         <Button variant="dark" className={`${anton.className} text-2xl uppercase space-x-2 w-full p-6`}>
                             <span>Scopri</span>
                             <IoMdArrowRoundForward />
                         </Button>
-                    </div>
+                    </Link>
                 </div>
 
             </div>

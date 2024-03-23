@@ -22,7 +22,8 @@ export const publicRoutes = [
  * @type{string}
  */
 export const publicDynamicRoutes = [
-    "/news"
+    "/news",
+    "/services"
 ]
 
 /**
