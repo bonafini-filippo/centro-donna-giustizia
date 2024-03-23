@@ -7,6 +7,7 @@ import {
     apiAuthPrefix,
     authRoutes,
     publicRoutes,
+    publicDynamicRoutes
 } from "@/routes"
 
 import { match as matchLocale } from '@formatjs/intl-localematcher'
@@ -58,6 +59,7 @@ const middleware = auth((req) => {
     const isLoggedIn = !!req.auth;
 
     const isApiAuthRoute = nextUrl.pathname.startsWith(apiAuthPrefix);
+    const isDynamicRoute = publicDynamicRoutes.some(route => nextUrl.pathname.startsWith(route));
 
     const isPublicRoute = withLanguage(publicRoutes, `/${locale}`).includes(nextUrl.pathname);
     const isAuthRoute = withLanguage(authRoutes, `/${locale}`).includes(nextUrl.pathname);
@@ -65,6 +67,7 @@ const middleware = auth((req) => {
     if (isApiAuthRoute) {
         return null;
     }
+
 
     if (pathnameIsMissingLocale) {
         const params = req.nextUrl.search
@@ -82,7 +85,7 @@ const middleware = auth((req) => {
     }
 
 
-    if (!isLoggedIn && !isPublicRoute) {
+    if (!isLoggedIn && !isPublicRoute && isDynamicRoute) {
         let callbackUrl = nextUrl.pathname;
         if (nextUrl.search) {
             callbackUrl += nextUrl.search;
