@@ -63,6 +63,10 @@ const config = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+        spin: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(365deg)' }
+        },
         arrow: {
           '0%, 100%': { transform: 'translateX(0)' },
           '50%': { transform: 'translateX(5px)' },
@@ -77,6 +81,7 @@ const config = {
         },
       },
       animation: {
+        spin: 'spin 4s  ease-in-out infinite',
         fly: 'fly 1.3s ease-in-out infinite',
         arrow: 'arrow .6s ease-in-out infinite',
         "accordion-down": "accordion-down 0.2s ease-out",
