@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { TiPlus } from "react-icons/ti";
-import { ItemCard } from "../_components/item";
-import { useRouter } from "next/navigation";
 import NewsTable from "./_components/news-table";
 import { getAllNews } from "@/data/news";
 import Link from "next/link";

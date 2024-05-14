@@ -28,7 +28,7 @@ export default async function Home({ params: { lang } }: any) {
       actionLab={homeDict.actionLab}
       actionUrl="/contacts"
       secondaryActionLabel={homeDict.actionLabSecondary}
-      secondaryActionUrl="/services"
+      secondaryActionUrl="/projects"
     />
   </>)
 }

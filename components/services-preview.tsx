@@ -28,7 +28,7 @@ export function NewsCard({ title, par, image, alt, reverse }: any) {
                     <p className='text-lg flex-grow'>{par}</p>
 
 
-                    <Link href="/services/test" className='flex justify-end mt-8'>
+                    <Link href="/projects/test" className='flex justify-end mt-8'>
                         <Button variant="dark" className={`${anton.className} text-2xl uppercase space-x-2 w-full p-6`}>
                             <span>Scopri</span>
                             <IoMdArrowRoundForward />
@@ -68,7 +68,7 @@ export default function ServicesPeview() {
                 par="Questo è un testo riempitivo per capire il situlatato finale come possa prendere le sembianze, senza pensare di inserire testi già completi e prodotti. Qa ci andrà una breve descrizione del contesto generale della sezione."
 
             />
-            <Link href="/services" className='w-full flex justify-center items-center'>
+            <Link href="/projects" className='w-full flex justify-center items-center'>
                 <Card className={` rounded-xl w-full max-w-[1200px] hover:bg-black/15 cursor-pointer text-black  bg-[#DFDFDF]`}>
                     <h2 className={`${anton.className} text-3xl uppercase text-left my-3 flex justify-center items-center gap-2`}>
                         <span>MOSTRA TUTTI I SERVIZI</span>

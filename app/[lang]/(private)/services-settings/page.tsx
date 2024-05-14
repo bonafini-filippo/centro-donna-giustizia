@@ -1,21 +1,27 @@
-"use client"
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import { TiPlus } from "react-icons/ti";
+import Link from "next/link";
+import ServicesTable from "./_components/services-table";
+import { getAllServices } from "@/actions/services";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useCurrentUser } from "@/hooks/use-current-user";
-import { ItemCard } from "../_components/item";
-import DevelopeMessage from "@/components/develope-message";
+const ServicesPage = async () => {
+    const services: any = await getAllServices();
 
-
-const ServicesPage = () => {
-    const user = useCurrentUser();
     return (
         <Card className="w-full h-full pb-20 overflow-hidden">
             <CardHeader>
-                <CardTitle className='text-primary text-4xl'>Servizi</CardTitle>
+                <div className="flex justify-between items-center">
+                    <CardTitle className='text-primary text-4xl'>Servizi</CardTitle>
+                    <Link href="/services-settings/new">
+                        <Button size={"lg"} className="flex items-center justify-center gap-2">
+                            <span className="text-xl">NEW</span>
+                            <TiPlus size={27} />
+                        </Button>
+                    </Link>
+                </div>
             </CardHeader>
-            <CardContent className="w-full h-full  overflow-y-auto space-y-7">
-                <DevelopeMessage />
-            </CardContent>
+            <ServicesTable services={services} />
         </Card>
     );
 }

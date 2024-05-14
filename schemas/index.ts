@@ -77,6 +77,15 @@ export const NewsSchema = z.object({
     date: z.string(),
 });
 
+export const ServicesSchema = z.object({
+    title: z.string(),
+    description: z.string(),
+    image: z.string(),
+    secondaryDescription: z.string(),
+    visible: z.boolean(),
+});
+
+
 export const RoleSchema = z.object({
     role: z.enum([UserRole.ADMIN, UserRole.USER, UserRole.EDITOR])
 })

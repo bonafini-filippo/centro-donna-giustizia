@@ -94,3 +94,14 @@ model News {
   date                 String
   slug                 String
 }
+
+model Services {
+  id                   Int     @id @default(autoincrement())
+  visible              Boolean @default(true)
+  title                String
+  description          String
+  secondaryDescription String?
+  slug                 String
+  location             String
+  image                String?
+}

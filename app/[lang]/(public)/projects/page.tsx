@@ -1,12 +1,14 @@
-import { MetadataProjectsPage } from "@/lib/pages";
+import Services from "@/components/services";
+import { MetadataServicesPage } from "@/lib/pages";
 import { Metadata } from "next";
 
-export const metadata: Metadata = MetadataProjectsPage;
+export const metadata: Metadata = MetadataServicesPage;
 
-const ProjectsPage = () => {
+const ServicesPage = () => {
     return (
-        <div>Projects Page</div>
-    );
+        <div className="mt-32">
+            <Services />
+        </div>);
 };
 
-export default ProjectsPage;
+export default ServicesPage;

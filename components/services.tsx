@@ -28,7 +28,7 @@ export function NewsCard({ title, par, image, alt, reverse }: any) {
                     <p className='text-lg flex-grow'>{par}</p>
 
 
-                    <Link href="/services/test" className='flex justify-end mt-8'>
+                    <Link href="/projects/test" className='flex justify-end mt-8'>
                         <Button variant="dark" className={`${anton.className} text-2xl uppercase space-x-2 w-full p-6`}>
                             <span>Scopri</span>
                             <IoMdArrowRoundForward />
@@ -49,13 +49,13 @@ export default function Services() {
 
             <NewsCard
                 title="uscire dalla violenza"
-                image="/test/protesta1.jpg"
+                image="/udv.jpg"
                 alt="testo alternativo"
                 par="Questo è un testo riempitivo per capire il situlatato finale come possa prendere le sembianze, senza pensare di inserire testi già completi e prodotti. Qa ci andrà una breve descrizione del contesto generale della sezione."
             />
             <NewsCard
                 title="oltre la strada"
-                image="/test/protesta4.jpg"
+                image="/ols.jpg"
                 alt="testo alternativo"
                 par="Questo è un testo riempitivo per capire il situlatato finale come possa prendere le sembianze, senza pensare di inserire testi già completi e prodotti. Qa ci andrà una breve descrizione del contesto generale della sezione."
                 reverse
@@ -63,7 +63,7 @@ export default function Services() {
 
             <NewsCard
                 title="Luna blu"
-                image="/test/protesta4.jpg"
+                image="/uds.jpg"
                 alt="testo alternativo"
                 par="Questo è un testo riempitivo per capire il situlatato finale come possa prendere le sembianze, senza pensare di inserire testi già completi e prodotti. Qa ci andrà una breve descrizione del contesto generale della sezione."
 

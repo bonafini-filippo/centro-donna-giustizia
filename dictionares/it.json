@@ -13,8 +13,8 @@
             "href": "/contacts"
         },
         "services": {
-            "label": "Servizi",
-            "href": "/services"
+            "label": "Progetti",
+            "href": "/projects"
         }
     },
     "userMenu": {

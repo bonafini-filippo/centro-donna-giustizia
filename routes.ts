@@ -23,7 +23,8 @@ export const publicRoutes = [
  */
 export const publicDynamicRoutes = [
     "/news",
-    "/services"
+    "/services",
+    "/projects"
 ]
 
 /**
