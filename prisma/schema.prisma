@@ -102,6 +102,5 @@ model Services {
   description          String
   secondaryDescription String?
   slug                 String
-  location             String
   image                String?
 }
